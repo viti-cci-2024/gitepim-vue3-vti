@@ -11,7 +11,7 @@
           Notre équipe sera heureuse de prendre en charge vos petits bouts !
         </h4>
         <!-- Bouton Réservez via RouterLink vers la page "Chambre" -->
-        <RouterLink :to="{ name: 'Chambre' }"
+        <RouterLink :to="{ name: 'GarderieResa' }"
           class="inline-block text-lg font-semibold py-3 px-8 rounded-full bg-[#FE8A24] text-white transition-all hover:bg-[#09012B] hover:scale-105">
           Réserver
         </RouterLink>
@@ -19,18 +19,72 @@
     </div>
   </section>
 
+
+
+
+
+  <!------------------------- LES 2 CARDS ------------------------------>
+
+
+
+
+  <section class="w-full bg-cover bg-center bg-[#605bf1]/10 pt-25 pb-20 mb-10">
+    <!-- Conteneur principal responsive -->
+    <div class="flex flex-col md:flex-row justify-around gap-6">
+
+      <!-- Image Left -->
+      <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center rounded-tr-lg rounded-br-lg shadow-lg"
+        style="background-image: url('/garderie/kidz-webp.webp')">
+      </div>
+
+      <!-- Card right -->
+      <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center">
+        <!-- Contenu texte au-dessus de l'image -->
+        <div class="absolute inset-0 flex flex-col justify-center p-4 md:p-6">
+          <h2 class="text-3xl font-bold mb-10">
+            La garderie propose de nombreuses activitées
+          </h2>
+          <ul class="space-y-4">
+            <li class="font-bold text-lg pb-2 border-b border-gray-300 last:border-0">
+              🏁   Course de sac
+            </li>
+            <li class="font-bold text-lg pb-2 border-b border-gray-300 last:border-0">
+              🏛️   Visite des lieux
+            </li>
+            <li class="font-bold text-lg pb-2 border-b border-gray-300 last:border-0">
+              🎨   Activités artistiques
+            </li>
+            <li class="font-bold text-lg pb-2 border-b border-gray-300 last:border-0">
+              😴   Siestes
+            </li>
+            <li class="font-bold text-lg pb-2 border-b border-gray-300 last:border-0">
+              📘   Cahiers de vacances
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
   <!-- GARDERIE EQUIPES PHOTO + TEXTE 1 et 2 -->
 
- 
-  <section class="py-10 px-4 bg-white">
-    <div class="max-w-7xl mx-auto">
-        <!-- Titre de la section -->
-  <h2 class="text-3xl font-bold mb-2">Notre équipe de passionnés saura encadrer vos enfants</h2>
 
-   <!-- 001 -->
-      <div class="flex flex-col md:flex-row justify-around gap-6">
+  <section class="py-10 px-4 bg-white mt-10 pb-25">
+    <div class="max-w-7xl mx-auto">
+      <!-- Titre de la section -->
+      <h2 class="text-3xl font-bold mb-2">Notre équipe de passionnés saura encadrer vos enfants</h2>
+
+      <!-- 001 -->
+      <div class="flex flex-col md:flex-row justify-around gap-6 mt-10">
         <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center">
-          <div class="absolute inset-0 flex flex-col justify-center  md:p-6">
+          <div class="absolute inset-0 flex flex-col justify-center md:p-0">
             <h2 class="text-3xl font-bold">Julie</h2>
             <br />
             <h4 class="font-bold text-lg mb-2">
@@ -54,7 +108,7 @@
         <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center rounded-xl shadow-lg"
           style="background-image: url('/garderie/garderie02.jpg')"></div>
         <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center">
-          <div class="absolute inset-0 flex flex-col justify-center p-4 md:p-6">
+          <div class="absolute inset-0 flex flex-col justify-center md:p-0">
             <h2 class="text-3xl font-bold">Emilie</h2>
             <br />
             <h4 class="font-bold text-lg mb-2 pb-2">
@@ -63,24 +117,45 @@
               l’apprentissage et amusant. Au plaisir de vous accueillir et de partager ces instants précieux avec vos
               jeunes explorateurs !
             </h4>
-           
+
           </div>
         </div>
       </div>
     </div>
   </section>
 
+
+
+    <!------------------------- BANDEAU SEPARATION ------------------------------>
+ 
+    <section
+  class="w-full h-[30vh] bg-cover bg-[center_65%]  flex items-center justify-center bg-gray-500 bg-blend-multiply"
+  :style="{ backgroundImage: 'url(/chambre/Bungalow-Jardin-05.png)' }"
+>
+  <div class="text-center">
+    <h1 class="mb-3 text-white text-4xl font-bold">
+      Notre service de garderie est ouvert tous les jours à toutes heures
+    </h1>
+
+  </div>
+</section>
+
+
+
+
+
+
   <!------------------------- BANDEAU PRE-FOOTER ------------------------------>
 
   <section
-    class="w-full h-[30vh] bg-cover bg-[center_90%]  flex items-center justify-center bg-gray-400 bg-blend-multiply"
+    class="w-full h-[30vh] bg-cover bg-[center_90%]  flex items-center justify-center bg-gray-400 bg-blend-multiply mt-10"
     :style="{ backgroundImage: 'url(/garderie/kidz-webp.webp)' }">
     <div class="text-center">
       <h1 class="mb-3 text-white text-4xl font-bold">
         Confiez-nous vos enfants !
       </h1>
       <!-- Bouton Réservez via RouterLink vers la page "Chambre" -->
-      <RouterLink :to="{ name: 'Chambre' }"
+      <RouterLink :to="{ name: 'GarderieResa' }"
         class="inline-block text-lg font-semibold py-3 px-8 rounded-full bg-[#FE8A24] text-white transition-all hover:bg-[#09012B] hover:scale-105">
         Je réserve !
       </RouterLink>

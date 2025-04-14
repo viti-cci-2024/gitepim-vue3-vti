@@ -10,16 +10,16 @@
           au Gîte Pim
         </h4>
         <!-- Bouton Réservez via RouterLink vers la page "Chambre" -->
-        <RouterLink :to="{ name: 'Chambre' }"
+        <RouterLink :to="{ name: 'ChambreResa' }"
           class="inline-block text-lg font-semibold py-3 px-8 rounded-full bg-[#FE8A24] text-white transition-all hover:bg-[#09012B] hover:scale-105">
-          En savoir plus
+          Reserver
         </RouterLink>
       </div>
     </div>
   </section>
 
   <!------------------------- GALERIE IMAGES ------------------------------>
-  <section class="py-10 px-4 bg-white">
+  <section class="py-10 px-4 bg-white mt-10">
   <div class="max-w-7xl mx-auto">
     <!-- Titre de la section -->
     <h2 class="text-3xl font-bold mb-6">Découvrez nos Bungalows Mer et Jardin</h2>
@@ -73,34 +73,32 @@
 
 
 
-  <section class="w-full h-[60vh] bg-cover bg-center bg-white">
+  <section class="w-full bg-cover bg-center bg-white mt-10 mb-10 md:mt-30 md:mb-40">
+  <!-- Conteneur principal responsive -->
+  <div class="flex flex-col md:flex-row justify-around gap-6">
+    
+    <!-- Image Left -->
+    <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center rounded-tr-lg rounded-br-lg shadow-lg"
+      style="background-image: url('/chambre/Bungalow-Mer-01.png')">
+    </div>
 
-     <!-- Conteneur principal responsive -->
-      <div class="flex flex-col md:flex-row justify-around gap-6">
-
-        <!-- Image Left -->
-        <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center rounded-tr-lg rounded-br-lg shadow-lg"
-          style="background-image: url('/chambre/Bungalow-Mer-01.png')">
-
-        </div>
-
-        <!-- Card right -->
-        <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center">
-          <!-- Contenu texte au-dessus de l'image -->
-          <div class="absolute inset-0 flex flex-col justify-start p-4 md:p-6">
-            <h2 class="text-3xl font-bold">Vivez une expérience unique face à l’océan.</h2> <br>
-            <h4 class="font-bold text-lg mb-2">Ces 5 bungalows Mer vous accueillent dans un cadre apaisant, mêlant
-              élégance et confort. Avec leur décoration lumineuse, leurs touches de bois naturel et leurs grandes baies
-              vitrées, ils offrent une vue imprenable
-              sur la mer. Chaque bungalow dispose d'une terrasse privée pour admirer
-              le coucher de soleil et profiter de l'air marin.</h4>
-          </div>
-        </div>
+    <!-- Card right -->
+    <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center">
+      <!-- Contenu texte au-dessus de l'image -->
+      <div class="absolute inset-0 flex flex-col justify-center p-4 md:p-6">
+        <h2 class="text-3xl font-bold">
+          Vivez une expérience unique face à l’océan.
+        </h2>
+        <h4 class="mt-4 font-bold text-lg">
+          Ces 5 bungalows Mer vous accueillent dans un cadre apaisant, mêlant élégance et confort. Avec leur décoration lumineuse, leurs touches de bois naturel et leurs grandes baies vitrées, ils offrent une vue imprenable sur la mer. Chaque bungalow dispose d'une terrasse privée pour admirer le coucher de soleil et profiter de l'air marin.
+        </h4>
       </div>
- 
-  </section>
+    </div>
 
-    <!------------------------- BANDEAU PRE-FOOTER ------------------------------>
+  </div>
+</section>
+
+<!------------------------- BANDEAU PRE-FOOTER ------------------------------>
  
     <section
   class="w-full h-[30vh] bg-center bg-cover flex items-center justify-center"
@@ -112,7 +110,7 @@
     </h1>
     <!-- Bouton Réservez via RouterLink vers la page "Chambre" -->
     <RouterLink
-      :to="{ name: 'Chambre' }"
+      :to="{ name: 'ChambreResa' }"
       class="inline-block text-lg font-semibold py-3 px-8 rounded-full bg-[#FE8A24] text-white transition-all hover:bg-[#09012B] hover:scale-105"
     >
       Je réserve !

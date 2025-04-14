@@ -10,9 +10,9 @@
           Venez émerveiller vos papilles qui n’en reviendront pas.
         </h4>
         <!-- Bouton Réservez via RouterLink vers la page "Chambre" -->
-        <RouterLink :to="{ name: 'Chambre' }"
+        <RouterLink :to="{ name: 'RepasResa' }"
           class="inline-block text-lg font-semibold py-3 px-8 rounded-full bg-[#FE8A24] text-white transition-all hover:bg-[#09012B] hover:scale-105">
-          En savoir plus
+          Réserver
         </RouterLink>
       </div>
     </div>
@@ -20,7 +20,7 @@
 
 <!--------------------------------       SECTION BAR DU RESTO        ----------------------------------------->
 
-<section class="py-10 px-4 bg-white">
+<section class="py-10 px-4 bg-white mt-10">
   <div class="max-w-7xl mx-auto">
     <!-- Titre de la section -->
     <h2 class="text-3xl font-bold mb-2">Nos cocktails</h2>
@@ -120,7 +120,7 @@
     </h1>
     <!-- Bouton Réservez via RouterLink vers la page "Chambre" -->
     <RouterLink
-      :to="{ name: 'Chambre' }"
+      :to="{ name: 'RepasResa' }"
       class="inline-block text-lg font-semibold py-3 px-8 rounded-full bg-[#FE8A24] text-white transition-all hover:bg-[#09012B] hover:scale-105"
     >
       Je réserve !

@@ -14,28 +14,28 @@
         </h4>
         <!-- Bouton Réservez via RouterLink vers la page "Chambre" -->
         <RouterLink
-          :to="{ name: 'Chambre' }"
+          :to="{ name: 'ChevalResa' }"
           class="inline-block text-lg font-semibold py-3 px-8 rounded-full bg-[#FE8A24] text-white transition-all hover:bg-[#09012B] hover:scale-105"
         >
-          En savoir plus
+          Réserver
         </RouterLink>
       </div>
     </div>
   </section>
 
   <!-- Section Présentation -->
-  <section class="bg-[#f8f9fa] py-20">
+  <section class="bg-[#605bf1]/10 py-20">
     <div class="max-w-7xl mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-8">
         Vivez une aventure équestre inoubliable !
       </h2>
       <div class="max-w-2xl mx-auto">
         <div class="bg-white p-8 rounded-xl shadow-lg">
-          <p class="text-base leading-relaxed text-gray-700">
+          <h4 class="font-bold text-lg mb-2">
             Partez à la découverte de la faune et de la flore locales lors d'une expérience exceptionnelle à dos de cheval.
             Choisissez votre cheval parmi nos 16 compagnons, chacun avec son propre caractère, et suivez un itinéraire enchanteur
             à travers des paysages verdoyants, jusqu'à un point de vue offrant un panorama à couper le souffle.
-          </p>
+          </h4>
         </div>
       </div>
     </div>
@@ -116,7 +116,7 @@
     </h1>
     <!-- Bouton Réservez via RouterLink vers la page "Chambre" -->
     <RouterLink
-      :to="{ name: 'Chambre' }"
+      :to="{ name: 'ChevalResa' }"
       class="inline-block text-lg font-semibold py-3 px-8 rounded-full bg-[#FE8A24] text-white transition-all hover:bg-[#09012B] hover:scale-105"
     >
       Je réserve !
