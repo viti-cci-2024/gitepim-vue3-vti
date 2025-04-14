@@ -57,7 +57,7 @@
       <div class="flex flex-col md:flex-row justify-around gap-6">
         <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center rounded-xl shadow-lg"
           style="background-image: url('/repas/meat.jpg')">
-          <div class="absolute inset-0 flex flex-col justify-start p-4 md:p-6">
+          <div class="absolute inset-0 flex flex-col justify-start p-6 md:p-6">
             <h2 class="text-2xl md:text-4xl font-bold text-white text-shadow mb-2">Côté Terre</h2>
             <p class="text-white text-xl md:text-xl text-shadow mb-4">Notre sélection de délicieuses viandes va ravir le carnivore qui est en vous !
             </p>
@@ -70,7 +70,7 @@
 
         <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center rounded-xl shadow-lg"
           style="background-image: url('/repas/fruits-de-mer-pim.jpeg')">
-          <div class="absolute inset-0 flex flex-col justify-start p-4 md:p-6">
+          <div class="absolute inset-0 flex flex-col justify-start p-6 md:p-6">
             <h2 class="text-2xl md:text-4xl font-bold text-white text-shadow mb-2">Côté Mer</h2>
             <p class="text-white text-xl md:text-xl text-shadow mb-4">Vous aimez les embruns et le goût de l’iode ? Nos fruits de mer seront un délice !</p>
             <RouterLink :to="{ name: 'Repas' }"
@@ -106,6 +106,28 @@
       </div>
     </div>
   </section>
+
+
+    <!------------------------- BANDEAU PRE-FOOTER ------------------------------>
+ 
+    <section
+  class="w-full h-[30vh] bg-bottom bg-cover flex items-center justify-center bg-gray-500 bg-blend-multiply"
+  :style="{ backgroundImage: 'url(/repas/dinner.jpg)' }"
+>
+  <div class="text-center">
+    <h1 class="mb-3 text-white text-4xl font-bold">
+      Réservez votre table !
+    </h1>
+    <!-- Bouton Réservez via RouterLink vers la page "Chambre" -->
+    <RouterLink
+      :to="{ name: 'Chambre' }"
+      class="inline-block text-lg font-semibold py-3 px-8 rounded-full bg-[#FE8A24] text-white transition-all hover:bg-[#09012B] hover:scale-105"
+    >
+      Je réserve !
+    </RouterLink>
+  </div>
+</section>
+
 
 </template>
 

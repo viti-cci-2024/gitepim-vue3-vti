@@ -41,54 +41,47 @@
     </div>
   </section>
 
-
-
- <!-- GARDERIE EQUIPES PHOTO + TEXTE 1 et 2 -->
-
- 
- <section class="py-10 px-4 bg-white">
-    <div class="max-w-7xl mx-auto">
-
-   <!-- 001 -->
-      <div class="flex flex-col md:flex-row justify-around gap-6">
-        <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center">
-          <div class="absolute inset-0 flex flex-col justify-center  md:p-6">
-            <h2 class="text-3xl font-bold">Emma et Nidguep (Matin)</h2>
-            <br />
-            <h4 class="font-bold text-lg mb-2">
+  <!-- Section Guides -->
+  <section class="py-10 bg-white">
+    <div class="max-w-7xl mx-auto px-4 space-y-12">
+      <!-- Guide Emma -->
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="w-48 flex-shrink-0">
+          <img
+            src="/cheval/Emma.jpg"
+            alt="Emma et Nidguep"
+            class="w-full h-[300px] object-cover rounded-xl shadow-lg"
+          />
+        </div>
+        <div class="flex-1">
+          <h3 class="text-2xl font-bold mb-2">Emma et Nidguep (Matin)</h3>
+          <p class="text-lg text-gray-700">
             Passionnée d'équitation et certifiée en randonnée, Emma guide les groupes le matin avec son cheval Nidguepe, un compagnon calme et réactif.
             Avec son expérience, elle assure une randonnée sereine et enrichissante à travers des paysages magnifiques.
-            </h4>
-          </div>
+          </p>
         </div>
-        <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-[center_28%] rounded-xl shadow-lg"
-          style="background-image: url('/cheval/Emma.jpg')"></div>
       </div>
-    </div>
-  </section>
 
-  <!-- 002 -->
-  <section class="py-10 px-4 bg-white">
-    <div class="max-w-7xl mx-auto">
-      <div class="flex flex-col md:flex-row justify-around gap-6">
-        <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-[center_1%] rounded-xl shadow-lg"
-          style="background-image: url('/cheval/Lucas.jpg')"></div>
-        <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center">
-          <div class="absolute inset-0 flex flex-col justify-center p-4 md:p-6">
-            <h2 class="text-3xl font-bold">Emilie</h2>
-            <br />
-            <h4 class="font-bold text-lg mb-2 pb-2">
+      <!-- Guide Lucas -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-8">
+        <div class="w-48 flex-shrink-0">
+          <img
+            src="/cheval/Lucas.jpg"
+            alt="Lucas et Papyrus"
+            class="w-full h-[300px] object-cover rounded-xl shadow-lg"
+          />
+        </div>
+        <div class="flex-1">
+          <h3 class="text-2xl font-bold mb-2">Lucas et Papyrus (Après-midi)</h3>
+          <p class="text-lg text-gray-700">
             Lucas, certifié en gestion de randonnées, prend le relais l'après-midi avec son cheval Papyrus, vif et élégant.
             Ensemble, ils offrent une expérience immersive et conviviale, où chaque randonneur profite pleinement de l'aventure.
-            </h4>
-           
-          </div>
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  
   <!-- Section Conditions de réservation -->
   <section class="bg-[#5852de] bg-opacity-10 py-20">
     <div class="max-w-7xl mx-auto px-4">

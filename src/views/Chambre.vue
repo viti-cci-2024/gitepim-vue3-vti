@@ -100,7 +100,7 @@
  
   </section>
 
-    <!------------------------- SEPARATION CTA ------------------------------>
+    <!------------------------- BANDEAU PRE-FOOTER ------------------------------>
  
     <section
   class="w-full h-[30vh] bg-center bg-cover flex items-center justify-center"
