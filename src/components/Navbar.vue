@@ -1,39 +1,112 @@
 <template>
-  <header class="fixed top-0 left-0 w-full bg-gray-100 shadow z-50">
+  <header class="fixed top-0 left-0 w-full bg-gradient-to-r from-[#09012B] to-[#605BF1] shadow z-50">
+    <!-- Conteneur principal -->
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <!-- Logo -->
-      <div class="text-xl font-bold text-gray-800">
-        Logo
-      </div>
+      <!-- Logo / Lien vers l'accueil -->
+      <RouterLink :to="{ name: 'Home' }" class="flex items-center">
+        <img src="/logo-gite-BLANC.png" alt="Accueil" class="w-40 h-auto hover:scale-110 transition-transform duration-300" title="Accueil" />
+      </RouterLink>
 
-      <!-- Navigation -->
-      <nav class="flex gap-6">
-        <router-link
-          :to="{ name: 'Home' }"
-          class="text-gray-700 font-medium hover:text-gray-900 transition"
-          :class="{ 'border-b-2 border-gray-800 pb-1': $route.name === 'Home' }"
-        >
-          Accueil
-        </router-link>
-        <router-link
-          :to="{ name: 'About' }"
-          class="text-gray-700 font-medium hover:text-gray-900 transition"
-          :class="{ 'border-b-2 border-gray-800 pb-1': $route.name === 'About' }"
-        >
-          À propos
-        </router-link>
-        <router-link
-          :to="{ name: 'Contact' }"
-          class="text-gray-700 font-medium hover:text-gray-900 transition"
-          :class="{ 'border-b-2 border-gray-800 pb-1': $route.name === 'Contact' }"
-        >
-          Contact
-        </router-link>
+      <!-- Bouton hamburger (mobile) -->
+      <button @click="toggleMenu" class="lg:hidden bg-transparent text-white focus:outline-none"
+        aria-label="Toggle navigation">
+        <svg v-if="!isOpen" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+          stroke-width="2" stroke="white" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="2"
+          stroke="white" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Navigation Desktop -->
+      <nav class="hidden lg:flex gap-6">
+        <RouterLink :to="{ name: 'Chambre' }" class="text-white hover:text-gray-300 transition">
+          Nos chambres
+        </RouterLink>
+        <RouterLink :to="{ name: 'Repas' }" class="text-white hover:text-gray-300 transition">
+          Notre restaurant
+        </RouterLink>
+        <RouterLink :to="{ name: 'Cheval' }" class="text-white hover:text-gray-300 transition">
+          Randonnée équestre
+        </RouterLink>
+        <RouterLink :to="{ name: 'Kayak' }" class="text-white hover:text-gray-300 transition">
+          Sortie en kayak
+        </RouterLink>
+        <RouterLink :to="{ name: 'Bagne' }" class="text-white hover:text-gray-300 transition">
+          Visite du bagne
+        </RouterLink>
+        <RouterLink :to="{ name: 'Garderie' }" class="text-white hover:text-gray-300 transition">
+          La garderie
+        </RouterLink>
       </nav>
     </div>
+
+    <!-- Navigation Mobile -->
+    <transition @before-enter="beforeEnter" @enter="enter" @leave="leave">
+      <div v-show="isOpen" ref="mobileMenu" class="lg:hidden bg-transparent overflow-hidden">
+        <!-- Ajout de text-right, espace augmenté et texte plus gros -->
+        <div class="px-6 pb-4 space-y-4 text-right">
+          <RouterLink @click="closeMenu" :to="{ name: 'Chambre' }"
+            class="block text-lg text-white hover:text-gray-300 transition">
+            Nos chambres
+          </RouterLink>
+          <RouterLink @click="closeMenu" :to="{ name: 'Repas' }"
+            class="block text-lg text-white hover:text-gray-300 transition">
+            Notre restaurant
+          </RouterLink>
+          <RouterLink @click="closeMenu" :to="{ name: 'Cheval' }"
+            class="block text-lg text-white hover:text-gray-300 transition">
+            Randonnée équestre
+          </RouterLink>
+          <RouterLink @click="closeMenu" :to="{ name: 'Kayak' }"
+            class="block text-lg text-white hover:text-gray-300 transition">
+            Sortie en kayak
+          </RouterLink>
+          <RouterLink @click="closeMenu" :to="{ name: 'Bagne' }"
+            class="block text-lg text-white hover:text-gray-300 transition">
+            Visite du bagne
+          </RouterLink>
+          <RouterLink @click="closeMenu" :to="{ name: 'Garderie' }"
+            class="block text-lg text-white hover:text-gray-300 transition">
+            La garderie
+          </RouterLink>
+        </div>
+      </div>
+    </transition>
   </header>
 </template>
 
 <script setup>
-// rien ici
+import { ref } from 'vue'
+import { RouterLink } from 'vue-router'
+
+const isOpen = ref(false)
+
+const toggleMenu = () => {
+  isOpen.value = !isOpen.value
+}
+
+const closeMenu = () => {
+  isOpen.value = false
+}
+
+// Hooks de transition pour animer le menu mobile
+function beforeEnter(el) {
+  el.style.height = '0'
+}
+function enter(el) {
+  el.style.transition = 'height 0.3s ease'
+  requestAnimationFrame(() => {
+    el.style.height = el.scrollHeight + 'px'
+  })
+}
+function leave(el) {
+  el.style.transition = 'height 0.3s ease'
+  el.style.height = el.scrollHeight + 'px'
+  requestAnimationFrame(() => {
+    el.style.height = '0'
+  })
+}
 </script>

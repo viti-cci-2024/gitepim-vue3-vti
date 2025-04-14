@@ -1,14 +1,17 @@
 <template>
-  <div class="min-h-screen bg-white">
+  <div class="flex flex-col min-h-screen">
     <Navbar />
 
-    <!-- Décale le contenu sous la navbar -->
-    <main class="pt-24 px-4 max-w-4xl mx-auto">
+    <!-- Main qui pousse le footer, pleine largeur -->
+    <main class="flex-grow pt-24 w-full">
       <router-view />
     </main>
+
+    <Footer />
   </div>
 </template>
 
 <script setup>
 import Navbar from './components/Navbar.vue'
+import Footer from './components/Footer.vue'
 </script>
