@@ -26,8 +26,8 @@
   <section class="py-10 px-4 bg-white">
     <div class="max-w-7xl mx-auto">
       <!-- Titre -->
-      <h3 class="text-2xl font-bold">Nos Bungalows</h3>
-      <br>
+      <h2 class="text-3xl font-bold">Nos Bungalows</h2> <br>
+      
       
       <!-- Conteneur principal responsive -->
       <div class="flex flex-col md:flex-row justify-around gap-6">
@@ -91,7 +91,8 @@
   <section class="py-10 px-4 bg-white">
     <div class="max-w-7xl mx-auto">
       <div class="flex justify-between items-center mb-6">
-        <h3 class="text-2xl font-bold">Nos activités</h3>
+        <h2 class="text-3xl font-bold">Nos activités</h2> <br>
+        
       </div>
 
       <!-- Carousel -->
@@ -117,7 +118,7 @@
   :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
   <div v-for="(group, index) in slideGroups" :key="index" class="flex-shrink-0 w-full flex gap-6">
     <div v-for="item in group" :key="item.title"
-      class="w-full sm:w-1/2 lg:w-1/3 bg-white rounded-xl shadow hover:shadow-lg border border-gray-200 transition">
+      class="w-full sm:w-1/2 lg:w-1/3 bg-white rounded-xl shadow border border-gray-200">
       <img :src="item.image" :alt="item.title" class="w-full h-48 object-cover rounded-t" />
       <div class="p-4">
         <h4 class="font-bold text-lg mb-2">{{ item.title }}</h4>
@@ -144,13 +145,14 @@
 
 <section class="py-10 px-4 bg-white">
   <div class="max-w-7xl mx-auto">
-      <h2 class="text-3xl font-bold text-center mb-10">Nos clients ont adoré</h2>
+      
+      <h2 class="text-3xl font-bold">Nos clients ont adoré</h2> <br>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div
           v-for="(testimonial, index) in testimonials"
           :key="index"
-          class="bg-white rounded-lg shadow p-6 text-center transition hover:shadow-lg"
+          class="bg-white rounded-lg shadow p-6 text-center border border-gray-200"
         >
           <!-- Avatar depuis /public/ -->
           <img
@@ -212,7 +214,7 @@ const items = [
   },
   {
     title: 'Club nautique',
-    text: "Balades détente ou sportive en kayak sur le lagon.",
+    text: "Balades en famille ou avec vos amis, détente ou sportive en kayak sur le lagon.",
     image: '/carou-kayak.jpg',
     link: { name: 'Kayak' },
   },
@@ -224,7 +226,7 @@ const items = [
   },
   {
     title: 'Nos bungalows',
-    text: "Jardin ou vue mer, choisissez votre bungalow idéal.",
+    text: "Jardin ou vue mer, choisissez votre bungalow pour passer un séjour idéal.",
     image: '/carou-bung.jpg',
     link: { name: 'Chambre' },
   },
