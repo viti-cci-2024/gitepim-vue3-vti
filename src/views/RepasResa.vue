@@ -1,20 +1,31 @@
 <template>
-  <!-- Section hero pleine largeur avec background et hauteur 60vh -->
-  <section class="w-full h-[60vh] bg-cover bg-center" :style="{ backgroundImage: 'url(/repas/resa-hero.jpg)' }">
+    <!------------------------- NEW HERO RESA CHAMBRE ------------------------------>
+    <section class="w-full h-[30vh] bg-cover bg-center" :style="{ backgroundImage: 'url(/repas/resa-hero.jpg)' }">
     <!-- Conteneur pour centrer verticalement le contenu avec padding -->
     <div class="max-w-7xl mx-auto flex flex-col justify-center items-start h-full p-5">
       <!-- Contenu texte en blanc aligné à gauche -->
       <div class="text-white text-left">
-        <h1 class="mb-3 text-shadow text-4xl font-bold">Réservation</h1>
+        <h1 class="mb-3 text-shadow text-4xl font-bold">Réservation de votre repas</h1>
         <h4 class="mb-3 text-shadow text-2xl">
-          de votre déjeuner ou de votre dîner.
+          Veuillez remplir le formulaire ci-dessous pour réserver votre bungalow.
         </h4>
       </div>
     </div>
   </section>
 
 
-
+<!------------------------- FORMULAIRE RESA REPAS ------------------------------>
+<section class="py-10 px-4 bg-white mt-10">
+  <div class="max-w-7xl mx-auto">
+    <h1 class="text-3xl font-bold mb-4">Réservation de Repas</h1>
+    <div class="flex flex-col md:flex-row gap-4">
+      <!-- Formulaire de réservation pour les repas -->
+      <div class="flex-1">
+        <ReservationRepas />
+      </div>
+    </div>
+  </div>
+</section>
   
 
 
@@ -44,6 +55,7 @@
   <!------------------------- SCRIPTS ------------------------------>
   <script setup>
   import { ref, computed, onMounted, onUnmounted, nextTick, watch } from 'vue'
+  import ReservationRepas from '../components/ReservationRepas.vue';
   import { RouterLink } from 'vue-router'
 
   const testimonials = [
