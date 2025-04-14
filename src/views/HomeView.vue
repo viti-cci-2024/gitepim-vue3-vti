@@ -147,7 +147,7 @@
     </h1>
     <!-- Bouton Réservez via RouterLink vers la page "Chambre" -->
     <RouterLink
-      :to="{ name: 'Chambre' }"
+      :to="{ name: 'ChambreResa' }"
       class="inline-block text-lg font-semibold py-3 px-8 rounded-full bg-[#FE8A24] text-white transition-all hover:bg-[#09012B] hover:scale-105"
     >
       Je réserve !

@@ -16,6 +16,23 @@
   </section>
 
 
+<!------------------------- FORMULAIRE RESA GARDERIE ------------------------------>
+<section class="py-10 px-4 bg-white mt-10">
+  <div class="max-w-7xl mx-auto">
+    <h1 class="text-3xl font-bold mb-4">Réservation à la Garderie</h1>
+    <div class="flex flex-col md:flex-row gap-4">
+      <!-- Formulaire de réservation pour les repas -->
+      <div class="flex-1">
+        <ReservationGarderie />
+      </div>
+            <!-- Widget météo affichant les infos pour la ville de Poum -->
+            <div class="flex-1">
+        <WeatherWidget />
+      </div>
+    </div>
+  </div>
+</section>
+  
 
 
 
@@ -46,7 +63,15 @@
 
 
 </template>
+<script setup>
+import { RouterLink } from 'vue-router'
+import WeatherWidget from '../components/WeatherWidget.vue';
+import ReservationGarderie from '../components/ReservationGarderie.vue';
+</script>
 
+<style scoped>
+/* Tu peux garder ce bloc si tu veux ajouter des styles perso */
+</style>
 <style scoped>
 /* Tu peux garder ce bloc si tu veux ajouter des styles perso */
 </style>
