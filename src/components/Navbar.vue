@@ -21,7 +21,7 @@
       </button>
 
       <!-- Navigation Desktop -->
-      <nav class="hidden lg:flex gap-6">
+      <nav class="hidden lg:flex gap-4">
         <RouterLink :to="{ name: 'Chambre' }" class="text-white hover:text-gray-300 transition">
           Nos chambres
         </RouterLink>

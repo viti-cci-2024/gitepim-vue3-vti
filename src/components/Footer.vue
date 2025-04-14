@@ -1,10 +1,12 @@
 <template>
-  <footer class="w-full mt-auto bg-gradient-to-r from-[#09012B] to-[#605BF1] text-white font-sans pt-10 pb-0">
+  <footer class="w-full mt-auto bg-gradient-to-r from-[#09012B] to-[#605BF1] text-white font-sans pt-10 pb-15">
     <div class="mx-auto px-4 max-w-7xl">
       <div class="flex flex-col md:flex-row md:justify-between gap-10">
         <!-- Colonne 1: Contact -->
         <div class="md:w-1/3">
-          <img src="/logo-gite-BLANC.png" alt="Logo Gîte Pim" class="w-48 mb-4 hover:scale-110 transition-transform duration-300" />
+          <RouterLink :to="{ name: 'Home' }" class="flex items-center">
+        <img src="/logo-gite-BLANC.png" alt="Accueil" class="w-48 mb-4 hover:scale-110 transition-transform duration-300" title="Accueil" />
+      </RouterLink>
           <h6 class="uppercase font-bold mb-3">Contact</h6>
           <p class="hover:text-yellow-400 transition-colors duration-300">
             <i class="bi bi-geo-alt-fill mr-2"></i> Îlot Pam, Poum
