@@ -17,6 +17,24 @@
   </section>
 
 
+<!------------------------- FORMULAIRE RESA BAGNE ------------------------------>
+<section class="py-10 px-4 bg-white mt-10">
+  <div class="max-w-7xl mx-auto">
+    <h1 class="text-3xl font-bold mb-4">Réservation de la visite du Bagne</h1>
+    <div class="flex flex-col md:flex-row gap-4">
+      <!-- Formulaire de réservation pour les repas -->
+      <div class="flex-1">
+        <ReservationBagne />
+      </div>
+            <!-- Widget météo affichant les infos pour la ville de Poum -->
+            <div class="flex-1">
+        <WeatherWidget />
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
   <!-- BANDEAU PRE-FOOTER avec le slider -->
   <section class="w-full h-[30vh] bg-center bg-cover flex items-center justify-center bg-gray-500 bg-blend-multiply"
@@ -44,6 +62,8 @@
 </template>
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
+import ReservationBagne from '../components/ReservationBagne.vue';
+import WeatherWidget from '../components/WeatherWidget.vue';
 
 // Déclaration des phrases du slider
 const phrases = [

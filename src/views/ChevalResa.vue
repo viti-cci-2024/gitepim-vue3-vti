@@ -17,7 +17,23 @@
     </div>
   </section>
 
-
+<!------------------------- FORMULAIRE RESA REPAS ------------------------------>
+<section class="py-10 px-4 bg-white mt-10">
+  <div class="max-w-7xl mx-auto">
+    <h1 class="text-3xl font-bold mb-4">Réservation de votre randonnée équestre</h1>
+    <div class="flex flex-col md:flex-row gap-4">
+      <!-- Formulaire de réservation pour les repas -->
+      <div class="flex-1">
+        <ReservationCheval />
+      </div>
+            <!-- Widget météo affichant les infos pour la ville de Poum -->
+            <div class="flex-1">
+        <WeatherWidget />
+      </div>
+    </div>
+  </div>
+</section>
+  
 
 
   
@@ -57,6 +73,8 @@
 
 <script setup>
 import { RouterLink } from 'vue-router'
+import WeatherWidget from '../components/WeatherWidget.vue';
+import ReservationCheval from '../components/ReservationCheval.vue';
 </script>
 
 <style scoped>

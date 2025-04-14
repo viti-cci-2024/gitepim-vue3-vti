@@ -4,9 +4,7 @@
     
     <!-- Étape 1 : Vérification du numéro de réservation de chambre -->
     <div v-if="step === 1">
-      <p class="mb-2 font-medium">
-        Entrez votre numéro de réservation de chambre :
-      </p>
+      <p class="mb-2 font-medium">Entrez votre numéro de réservation de chambre :</p>
       <input
         v-model="roomReservationNumber"
         type="text"
@@ -32,9 +30,7 @@
 
       <!-- Saisie de la date du repas (doit être entre les dates de la chambre) -->
       <div class="mb-4">
-        <label class="block text-sm font-medium" for="serviceDate">
-          Date du repas :
-        </label>
+        <label class="block text-sm font-medium" for="serviceDate">Date du repas :</label>
         <input
           id="serviceDate"
           v-model="serviceDate"
@@ -47,10 +43,7 @@
       </div>
 
       <!-- Bloc météo pour le repas -->
-      <div
-        v-if="serviceDate"
-        class="mb-4 p-4 border rounded shadow-md"
-      >
+      <div v-if="serviceDate" class="mb-4 p-4 border rounded shadow-md">
         <p class="font-medium">
           Prévision météo pour votre repas le {{ serviceDate }} :
         </p>
@@ -97,8 +90,7 @@
           required
         />
         <p class="text-sm text-gray-600">
-          Capacité maximale par service : 30 couverts. Disponibles :
-          <strong>{{ availableCovers }}</strong>
+          Capacité maximale par service : 30 couverts. Disponibles : <strong>{{ availableCovers }}</strong>
         </p>
       </div>
 
@@ -269,7 +261,6 @@ const submitMealReservation = () => {
   nextTick(() => {
     const el = document.getElementById('confirmation');
     if (el) {
-      window.location.hash = '#confirmation';
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });

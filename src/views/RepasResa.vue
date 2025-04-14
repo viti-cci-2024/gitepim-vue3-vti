@@ -23,6 +23,10 @@
       <div class="flex-1">
         <ReservationRepas />
       </div>
+            <!-- Widget météo affichant les infos pour la ville de Poum -->
+            <div class="flex-1">
+        <WeatherWidget />
+      </div>
     </div>
   </div>
 </section>
@@ -55,6 +59,7 @@
   <!------------------------- SCRIPTS ------------------------------>
   <script setup>
   import { ref, computed, onMounted, onUnmounted, nextTick, watch } from 'vue'
+  import WeatherWidget from '../components/WeatherWidget.vue';
   import ReservationRepas from '../components/ReservationRepas.vue';
   import { RouterLink } from 'vue-router'
 

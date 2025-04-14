@@ -11,6 +11,24 @@
   </section>
 
 
+<!------------------------- FORMULAIRE RESA KAYAK ------------------------------>
+<section class="py-10 px-4 bg-white mt-10">
+  <div class="max-w-7xl mx-auto">
+    <h1 class="text-3xl font-bold mb-4">Réservation de votre sortie en Kayak</h1>
+    <div class="flex flex-col md:flex-row gap-4">
+      <!-- Formulaire de réservation pour les repas -->
+      <div class="flex-1">
+        <ReservationKayak />
+      </div>
+            <!-- Widget météo affichant les infos pour la ville de Poum -->
+            <div class="flex-1">
+        <WeatherWidget />
+      </div>
+    </div>
+  </div>
+</section>
+  
+
 
 
 
@@ -35,13 +53,12 @@
   </section>
 
 
-
-
-
 </template>
 
 <script setup>
 import { ref, computed, nextTick } from 'vue'
+import WeatherWidget from '../components/WeatherWidget.vue';
+import ReservationKayak from '../components/ReservationKayak.vue';
 import { RouterLink } from 'vue-router'
 
 // Tableau d'images de la galerie (chacun encapsulé dans un objet pour être compatible avec la logique du carousel)
