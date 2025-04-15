@@ -1,7 +1,7 @@
 <template>
 
 <div class="reservation-form p-4">
-        <h2 class="text-2xl font-bold mb-4">Réserver une Chambre</h2>
+        <h2 class="text-2xl font-bold mb-4">Veuillez compléter ce formulaire</h2>
 
         <!-- Étape 1 : Saisie des dates -->
         <div v-if="step === 1">

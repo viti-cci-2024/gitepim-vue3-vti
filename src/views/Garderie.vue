@@ -126,33 +126,47 @@
 
 
 
-    <!------------------------- BANDEAU SEPARATION ------------------------------>
- 
-    <section
-  class="w-full h-[30vh] bg-cover bg-[center_65%]  flex items-center justify-center bg-gray-500 bg-blend-multiply"
-  :style="{ backgroundImage: 'url(/chambre/Bungalow-Jardin-05.png)' }"
->
-  <div class="text-center">
-    <h1 class="mb-3 text-white text-4xl font-bold">
-      Notre service de garderie est ouvert tous les jours à toutes heures
-    </h1>
+  <!------------------------- BANDEAU SEPARATION ------------------------------>
 
+
+
+ 
+
+<!-- Section Conditions Résa GARDERIE -->
+<section class="bg-[#5852de] bg-opacity-100 py-10 mt-10">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-center text-center md:text-left">
+      
+      <!-- Texte à gauche -->
+      <div class="md:w-1/2 flex flex-col justify-center md:ms-25">
+        <h2 class="text-3xl text-white font-bold mb-6">Pour s'inscrire à la garderie ouverte 24h/24 :</h2>
+        <ul class="list-disc list-inside space-y-4 text-lg text-white">
+          <li>Votre numéro de chambre</li>
+          <li>Heure de début et de fin</li>
+          <li>Pas plus de 4h d'affilée</li>
+          <li>15 places disponibles au maximum</li>
+        </ul>
+      </div>
+
+      <!-- Image à droite -->
+      <div class="md:w-1/2 flex justify-center md:me-25">
+        <img src="/garderie/kid-det.png"
+             alt="Sécurité" title="Gilet de sauvetage"
+             class="w-[280px] md:w-[380px] h-auto object-contain">
+      </div>
+    </div>
   </div>
 </section>
-
-
-
-
 
 
   <!------------------------- BANDEAU PRE-FOOTER ------------------------------>
 
   <section
-    class="w-full h-[30vh] bg-cover bg-[center_90%]  flex items-center justify-center bg-gray-400 bg-blend-multiply mt-10"
+    class="w-full h-[30vh] bg-cover bg-[center_90%] flex items-center justify-center bg-gray-400 bg-blend-multiply"
     :style="{ backgroundImage: 'url(/garderie/kidz-webp.webp)' }">
     <div class="text-center">
       <h1 class="mb-3 text-white text-4xl font-bold">
-        Confiez-nous vos enfants !
+        Nous sommes prêts pour vos enfants !
       </h1>
       <!-- Bouton Réservez via RouterLink vers la page "Chambre" -->
       <RouterLink :to="{ name: 'GarderieResa' }"

@@ -53,11 +53,11 @@
  <section class="py-10 px-4 bg-white">
     <div class="max-w-7xl mx-auto">
       <div class="flex justify-between items-center mb-6">
-        <h2 class="text-3xl font-bold">Nos activités</h2>
+        <h2 class="text-3xl font-bold">Nos activités</h2><br>
       </div>
 
       <div class="relative overflow-hidden">
-        <!-- Boutons de navigation -->
+        <!-- Boutons de navigation avec attribut disabled -->
         <button @click="prev" :disabled="isAnimating"
           class="absolute top-1/2 left-0 -translate-y-1/2 bg-white text-gray-800 p-4 rounded-full shadow-lg hover:bg-gray-100 transition z-10">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
@@ -102,7 +102,6 @@
       </div>
     </div>
   </section>
-  <!--------------------- FIN CAROUSEL --------------------->
 
   <!------------------------- SEPARATION ------------------------------>
 
@@ -176,8 +175,8 @@ import { RouterLink } from 'vue-router'
 
 // Vos items de carousel
 const items = [
-  { title: 'Visite du bagne', text: "Replongez avec notre guide dans l'histoire du pays sur l'île de Pam", image: '/carou-bagne.jpg', link: { name: 'Bagne' } },
-  { title: 'Randonnée équestre', text: "De belles balades dans la nature avec notre guide. À ne pas manquer !", image: '/carou-cheval.jpg', link: { name: 'Cheval' } },
+  { title: 'Visite du bagne', text: "Replongez avec notre guide dans l'histoire du pays sur l'\u00eele de Pam", image: '/carou-bagne.jpg', link: { name: 'Bagne' } },
+  { title: 'Randonnée équestre', text: "De belles balades dans la nature avec notre guide. \u00c0 ne pas manquer !", image: '/carou-cheval.jpg', link: { name: 'Cheval' } },
   { title: 'Notre garderie', text: "Confiez-nous avec sérénité vos enfants pendant vos activités sportives ou de repos.", image: '/carou-gard.jpg', link: { name: 'Garderie' } },
   { title: 'Club nautique', text: "Balades en famille ou avec vos amis, détente ou sportive en kayak sur le lagon.", image: '/carou-kayak.jpg', link: { name: 'Kayak' } },
   { title: 'Restaurant Pim', text: "Pour les gourmets et les gourmands, notre carte saura vous ravir !", image: '/carou-repas.jpg', link: { name: 'Repas' } },
@@ -203,7 +202,7 @@ const itemsPerSlide = computed(() => {
   return 3
 })
 
-// Création des groupes de slides
+// Créer les groupes de slides classiques
 const slideGroups = computed(() => {
   const result = []
   for (let i = 0; i < items.length; i += itemsPerSlide.value) {
@@ -212,7 +211,8 @@ const slideGroups = computed(() => {
   return result
 })
 
-// Construction du tableau étendu pour simuler l'infini (ajout des clones)
+// Construire un tableau étendu pour simuler l'infini :
+// Ajout du clone du dernier groupe en début et du premier groupe à la fin.
 const extendedSlides = computed(() => {
   const groups = slideGroups.value
   if (groups.length > 0) {
@@ -246,7 +246,7 @@ const prev = () => {
   currentSlide.value--
 }
 
-// Gestion de la fin de la transition avec délai pour le saut instantané
+// Gestion de la fin de la transition avec délai
 const handleTransitionEnd = () => {
   if (currentSlide.value === extendedSlides.value.length - 1) {
     disableTransition.value = true
@@ -262,16 +262,6 @@ const handleTransitionEnd = () => {
     }, 50)
   })
 }
-
-// ▶️ AJOUT : Watcher pour réinitialiser le carousel lors du redimensionnement
-watch(itemsPerSlide, () => {
-  // Réinitialise currentSlide à 1 pour correspondre aux nouveaux groupes
-  currentSlide.value = 1
-  disableTransition.value = true
-  nextTick(() => {
-    disableTransition.value = false
-  })
-})
 
 /* --------------------- FIN CAROUSEL --------------------- */
 

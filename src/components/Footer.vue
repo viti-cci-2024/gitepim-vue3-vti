@@ -24,7 +24,7 @@
           <div class="flex flex-col md:flex-row md:gap-10">
             <!-- Navigation -->
             <div class="w-full md:w-1/2">
-              <h6 class="uppercase font-bold mb-3">Navigation</h6>
+              <h6 class="uppercase font-bold mb-3">Le Gîte</h6>
               <ul class="space-y-2">
                 <li>
                   <RouterLink :to="{ name: 'Home' }" class="hover:text-yellow-400 hover:underline transition-colors">
@@ -51,7 +51,7 @@
   
             <!-- Activité -->
             <div class="w-full md:w-1/2 mt-6 md:mt-0">
-              <h6 class="uppercase font-bold mb-3">Activité</h6>
+              <h6 class="uppercase font-bold mb-3">Activités</h6>
               <ul class="space-y-2">
                 <li>
                   <RouterLink :to="{ name: 'Cheval' }" class="hover:text-yellow-400 hover:underline transition-colors">
@@ -74,15 +74,33 @@
         </div>
   
         <!-- Colonne 3: Réseaux sociaux -->
-        <div class="md:w-1/3">
-          <img src="/cartepim.png" alt="lieux Gîte Pim" class="w-full max-w-xs mb-4 hover:scale-110 transition-transform duration-300" />
-          <h6 class="uppercase font-bold mt-6 mb-3">Suivez-nous</h6>
-          <div class="flex space-x-4">
-            <a href="#"><img src="/facebook.png" alt="Facebook" class="w-6 hover:scale-110 transition-transform duration-300" /></a>
-            <a href="#"><img src="/instagram.png" alt="Instagram" class="w-6 hover:scale-110 transition-transform duration-300" /></a>
-            <a href="#"><img src="/twitter.png" alt="Twitter" class="w-6 hover:scale-110 transition-transform duration-300" /></a>
-          </div>
-        </div>
+
+        <div class="w-full md:w-1/3">
+          <img src="/cartepim.png" alt="lieux Gîte Pim" class="w-full mb-4 hover:scale-110 transition-transform duration-300" />
+  <h6 class="uppercase font-bold mt-6 mb-3">Suivez-nous</h6>
+  <div class="flex space-x-4">
+    <div class="relative group">
+      <img src="/facebook.png" alt="Facebook" class="w-6 hover:scale-110 transition-transform duration-300" />
+      <span class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
+        Bientôt disponible
+      </span>
+    </div>
+    <div class="relative group">
+      <img src="/instagram.png" alt="Instagram" class="w-6 hover:scale-110 transition-transform duration-300" />
+      <span class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
+        Bientôt disponible
+      </span>
+    </div>
+    <div class="relative group">
+      <img src="/twitter.png" alt="Twitter" class="w-6 hover:scale-110 transition-transform duration-300" />
+      <span class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
+        Bientôt disponible
+      </span>
+    </div>
+  </div>
+</div>
+
+
       </div>
     </div>
   </footer>

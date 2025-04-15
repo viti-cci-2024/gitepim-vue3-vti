@@ -88,21 +88,31 @@
     </div>
   </section>
 
-  
-  <!-- Section Conditions de réservation -->
-  <section class="bg-[#5852de] bg-opacity-10 py-20">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">Conditions de réservation</h2>
-      <div class="max-w-2xl mx-auto">
-        <ul class="list-disc list-inside space-y-3 text-lg text-gray-800">
+
+<!-- Section Conditions Résa cheval -->
+<section class="bg-[#5852de] bg-opacity-100 py-10">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-center text-center md:text-left">
+      
+      <!-- Texte à gauche -->
+      <div class="md:w-1/2 flex flex-col justify-center">
+        <h2 class="text-3xl text-white font-bold mb-6">Conditions de réservation</h2>
+        <ul class="list-disc list-inside space-y-4 text-lg text-white">
           <li>Réservation obligatoire d'une chambre au gîte</li>
           <li>Activité accessible à tous, débutants comme cavaliers confirmés</li>
           <li>En cas de pluie, la randonnée sera reportée pour votre sécurité</li>
         </ul>
       </div>
-    </div>
-  </section>
 
+      <!-- Image à droite -->
+      <div class="md:w-1/2 flex justify-center">
+        <img src="/cheval/cheval-condition.png"
+             alt="Sécurité" title="Gilet de sauvetage"
+             class="w-[280px] md:w-[380px] h-auto object-contain">
+      </div>
+    </div>
+  </div>
+</section>
 
     <!------------------------- BANDEAU PRE-FOOTER ------------------------------>
  

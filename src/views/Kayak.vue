@@ -1,6 +1,6 @@
 <template>
   <!-- SECTION HERO -->
-  <section class="w-full h-[60vh] bg-cover bg-center" :style="{ backgroundImage: 'url(/kayak/kayak-hero.jpeg)' }">
+  <section class="w-full h-[60vh] bg-cover bg-center " :style="{ backgroundImage: 'url(/kayak/kayak-hero.webp)' }">
     <div class="max-w-7xl mx-auto flex flex-col justify-center items-start h-full p-5">
       <div class="text-white text-left">
         <h1 class="mb-3 text-shadow text-4xl font-bold">Vivez la mer autrement...</h1>
@@ -99,14 +99,35 @@
     </div>
   </section>
 
-  <!-- SECTION CONSIGNE DE SÉCURITÉ -->
-  <section class="py-10 px-4 bg-white">
-    <div class="max-w-7xl mx-auto">
-      <h4 class="text-2xl font-bold mb-4">Consigne de sécurité</h4>
-      <img src="/kayak/gilet-sauvetage.jpg" alt="Sécurité" title="Gilet de sauvetage"
-        class="w-full h-auto object-cover rounded-lg shadow-lg" />
+<!-- Section Conditions sécurité -->
+<section class="bg-[#5852de] bg-opacity-100 py-10">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-center text-center md:text-left">
+      
+      <!-- Texte à gauche -->
+      <div class="md:w-1/2 flex flex-col justify-center">
+        <h2 class="text-3xl text-white font-bold mb-6">Consignes de sécurité en kayak</h2>
+        <ul class="list-disc list-inside space-y-4 text-lg text-white">
+          <li>Le port du gilet de sauvetage est obligatoire</li>
+          <li>Respectez les consignes du moniteur avant et pendant l'activité</li>
+          <li>Ne vous éloignez jamais seul du groupe, restez toujours visible</li>
+        </ul>
+      </div>
+
+      <!-- Image à droite -->
+      <div class="md:w-1/2 flex justify-center">
+        <img src="/kayak/gilet-sauvetage-det.png"
+             alt="Sécurité" title="Gilet de sauvetage"
+             class="w-[280px] md:w-[380px] h-auto object-contain">
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
+
+
+
+
 
 
 

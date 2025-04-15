@@ -1,14 +1,13 @@
 <template>
   <!-- Section hero pleine largeur avec background et hauteur 60vh -->
-  <section class="w-full h-[60vh] bg-cover bg-center" :style="{ backgroundImage: 'url(/garderie/garderie-hero.jpg)' }">
+  <section class="w-full h-[40vh] md:h-[30vh] bg-cover bg-center" :style="{ backgroundImage: 'url(/garderie/garderie-hero.jpg)' }">
     <!-- Conteneur pour centrer verticalement le contenu avec padding -->
     <div class="max-w-7xl mx-auto flex flex-col justify-center items-start h-full p-5">
       <!-- Contenu texte en blanc aligné à gauche -->
       <div class="text-white text-left">
-        <h1 class="mb-3 text-shadow text-4xl font-bold">Besoin une excursion entre entre amoureux ou d’un moment de
-          calme ?</h1>
+        <h1 class="mb-3 text-shadow text-4xl font-bold">Un moment de détente vous attend</h1>
         <h4 class="mb-3 text-shadow text-2xl">
-          Notre équipe sera heureuse de prendre en charge vos petits bouts !
+          Planifiez-le dès maintenant.
         </h4>
 
       </div>
@@ -25,53 +24,39 @@
       <div class="flex-1">
         <ReservationGarderie />
       </div>
-            <!-- Widget météo affichant les infos pour la ville de Poum -->
-            <div class="flex-1">
-        <WeatherWidget />
-      </div>
+        <!-- Widget météo affichant les infos pour la ville de Poum -->
+        <div class="flex-1">
+          <WeatherWidget />
+          <br>
+          <p class="mb-3"><strong>Pour réserver la garderie, vous avez besoin de votre numéro de réservation de chambre.
+              Si vous n'en avez pas encore un, veuillez d'abord réserver votre chambre</strong></p>
+          <RouterLink :to="{ name: 'ChambreResa' }"
+            class="inline-block text-sm font-medium py-2 px-4 rounded-full bg-[#FE8A24] text-white transition-all hover:bg-[#09012B] hover:scale-105">
+            Réserver une chambre
+          </RouterLink>
+        </div>
     </div>
   </div>
 </section>
   
 
-
-
-
-
-
-
-  <!------------------------- BANDEAU PRE-FOOTER ------------------------------>
-
-  <section
-    class="w-full h-[30vh] bg-cover bg-[center_90%]  flex items-center justify-center bg-gray-400 bg-blend-multiply mt-10"
-    :style="{ backgroundImage: 'url(/garderie/kidz-webp.webp)' }">
-    <div class="text-center">
-      <h1 class="mb-3 text-white text-4xl font-bold">
-        Confiez-nous vos enfants !
-      </h1>
-      <!-- Bouton Réservez via RouterLink vers la page "Chambre" -->
-      <RouterLink :to="{ name: 'Chambre' }"
-        class="inline-block text-lg font-semibold py-3 px-8 rounded-full bg-[#FE8A24] text-white transition-all hover:bg-[#09012B] hover:scale-105">
-        Je réserve !
-      </RouterLink>
-    </div>
-  </section>
-
-
-
+<PrefooterResa />
 
 
 
 </template>
 <script setup>
 import { RouterLink } from 'vue-router'
+import PrefooterResa from '../components/PrefooterResa.vue';
 import WeatherWidget from '../components/WeatherWidget.vue';
 import ReservationGarderie from '../components/ReservationGarderie.vue';
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
+
+
 </script>
 
 <style scoped>
-/* Tu peux garder ce bloc si tu veux ajouter des styles perso */
+/*  */
+
 </style>
-<style scoped>
-/* Tu peux garder ce bloc si tu veux ajouter des styles perso */
-</style>
+

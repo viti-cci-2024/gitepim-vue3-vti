@@ -1,7 +1,7 @@
 <!-- ReservationGarderie.vue -->
 <template>
     <div class="reservation-garderie p-4">
-      <h2 class="text-2xl font-bold mb-4">Réserver la Garderie</h2>
+      <h2 class="text-2xl font-bold mb-4">Veuillez compléter ce formulaire</h2>
       
       <!-- Étape 1 : Vérification du numéro de réservation de chambre -->
       <div v-if="step === 1">

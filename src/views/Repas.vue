@@ -1,6 +1,6 @@
 <template>
   <!-- Section hero pleine largeur avec background et hauteur 60vh -->
-  <section class="w-full h-[60vh] bg-cover bg-center" :style="{ backgroundImage: 'url(/repas/repas-hero.jpg)' }">
+  <section class="w-full h-[60vh] bg-cover bg-center  bg-gray-400 bg-blend-multiply" :style="{ backgroundImage: 'url(/repas/repas-hero.jpg)' }">
     <!-- Conteneur pour centrer verticalement le contenu avec padding -->
     <div class="max-w-7xl mx-auto flex flex-col justify-center items-start h-full p-5">
       <!-- Contenu texte en blanc aligné à gauche -->
@@ -55,7 +55,7 @@
     <div class="max-w-7xl mx-auto">
       <h2 class="text-3xl font-bold">Nos spécialités</h2><br>
       <div class="flex flex-col md:flex-row justify-around gap-6">
-        <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center rounded-xl shadow-lg"
+        <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center rounded-xl shadow-lg  bg-gray-300 bg-blend-multiply"
           style="background-image: url('/repas/meat.jpg')">
           <div class="absolute inset-0 flex flex-col justify-start p-6 md:p-6">
             <h2 class="text-2xl md:text-4xl font-bold text-white text-shadow mb-2">Côté Terre</h2>
@@ -68,7 +68,7 @@
           </div>
         </div>
 
-        <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center rounded-xl shadow-lg"
+        <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center rounded-xl shadow-lg  bg-gray-300 bg-blend-multiply"
           style="background-image: url('/repas/fruits-de-mer-pim.jpeg')">
           <div class="absolute inset-0 flex flex-col justify-start p-6 md:p-6">
             <h2 class="text-2xl md:text-4xl font-bold text-white text-shadow mb-2">Côté Mer</h2>
