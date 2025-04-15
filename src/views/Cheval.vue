@@ -88,7 +88,7 @@
           style="background-image: url('/cheval/Lucas.jpg')"></div>
         <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center">
           <div class="absolute inset-0 flex flex-col justify-center p-4 md:p-6">
-            <h2 class="text-3xl font-bold">Emilie</h2>
+            <h2 class="text-3xl font-bold">Lucas et Papyrus (Après-midi)</h2>
             <br />
             <h4 class="font-bold text-lg mb-2 pb-2">
             Lucas, certifié en gestion de randonnées, prend le relais l'après-midi avec son cheval Papyrus, vif et élégant.
@@ -119,7 +119,7 @@
 
       <!-- Image à droite -->
       <div class="md:w-1/2 flex justify-center">
-        <img src="/cheval/cheval-condition.png"
+        <img src="/cheval/horse-ride-right.png"
              alt="Sécurité" title="Gilet de sauvetage"
              class="w-[280px] md:w-[380px] h-auto object-contain">
       </div>

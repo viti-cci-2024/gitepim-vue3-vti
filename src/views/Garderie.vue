@@ -5,9 +5,9 @@
     <div class="max-w-7xl mx-auto flex flex-col justify-center items-start h-full p-5">
       <!-- Contenu texte en blanc aligné à gauche -->
       <div class="text-white text-left">
-        <h1 class="mb-3 text-shadow text-4xl font-bold">Envie d’une escapade en amoureux ou d’un moment de calme ?</h1>
+        <h1 class="mb-3 text-shadow text-4xl font-bold">Profitez, on garde vos petits !</h1>
         <h4 class="mb-3 text-shadow text-2xl">
-          Notre équipe sera heureuse de prendre en charge vos petits bouts !
+          Notre équipe sera heureuse de prendre en charge vos enfants !
         </h4>
         <!-- Bouton Réservez via RouterLink vers la page "Chambre" -->
         <RouterLink :to="{ name: 'GarderieResa' }"

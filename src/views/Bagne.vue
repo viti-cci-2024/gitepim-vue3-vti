@@ -76,7 +76,7 @@
 
 
   <!-- BANDEAU PRE-FOOTER avec le slider -->
-  <section class="w-full h-[40vh] md:h-[30vh] bg-center bg-cover flex items-center px-2 justify-center bg-gray-500 bg-blend-multiply"
+  <section class="w-full h-[50vh] md:h-[40vh] bg-center bg-cover flex items-center px-2 justify-center bg-gray-500 bg-blend-multiply"
     :style="{ backgroundImage: 'url(/bagne/bagne-3.jpg)' }">
     <div class="text-center">
       <h1 class="mb-3 text-white text-4xl font-bold">
