@@ -5,7 +5,20 @@
 
         <!-- Étape 1 : Saisie des dates -->
         <div v-if="step === 1">
-            <p class="mb-2 font-medium">Sélectionnez vos dates de séjour :</p>
+            <p class="mb-2 font-medium">Sélectionnez vos dates de séjour :
+<!-- Icône d'information avec tooltip en CSS uniquement -->
+      <!-- Icône "i" -->
+      <span class="relative group ml-2 flex items-center justify-center w-6 h-6 text-blue-500 border border-blue-500 rounded-full cursor-pointer">
+        i
+      
+      <!-- Tooltip : affichage en mobile et desktop -->
+      <div class="absolute bottom-full left-1 mb-2 hidden group-hover:block group-focus:block bg-gray-700 text-white text-lg md:text-base rounded py-2 px-3 w-85 z-10">
+        Important : Pour réserver une activité, vous aurez besoin de votre numéro de réservation de chambre. Pensez à bien noter ce numéro qui vous sera donné après la validation du formulaire.
+      </div>
+    </span>
+
+
+            </p>
             <div class="flex flex-col sm:flex-row gap-4 mb-4">
                 <div class="flex-1">
                     <label class="block text-sm font-medium" for="startDate">Date de début :</label>
