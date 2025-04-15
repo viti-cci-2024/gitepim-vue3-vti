@@ -1,6 +1,6 @@
 <template>
     <!-- BANDEAU PRE-FOOTER avec le slider -->
-  <section class="w-full h-[40vh] md:h-[30vh] bg-top bg-cover flex items-center justify-center bg-gray-500 bg-blend-multiply"
+  <section class="w-full h-[50vh] md:h-[40vh] bg-top bg-cover flex items-center justify-center bg-gray-500 bg-blend-multiply"
     :style="{ backgroundImage: 'url(/bandoprestas.webp)' }">
     <div class="text-center">
       <h1 class="mb-3 text-white text-4xl font-bold">
