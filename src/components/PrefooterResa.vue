@@ -4,18 +4,18 @@
     :style="{ backgroundImage: 'url(/bandoprestas.webp)' }">
     <div class="text-center">
       <h1 class="mb-3 text-white text-4xl font-bold">
-        Découvrez nos activités
+        Découvrez nos activités
       </h1>
       <!-- Conteneur du slider : position relative et overflow-hidden -->
       <div class="relative h-16">
         <transition name="slide" mode="out-in">
           <p :key="currentIndex"
-            class="absolute inset-0 flex items-center justify-center text-2xl font-semibold text-white whitespace-nowrap">
+            class="absolute inset-0 flex items-center justify-center text-2xl font-semibold text-white whitespace-normal md:whitespace-nowrap">
             {{ currentPhrase }}
           </p>
         </transition>
       </div>
-      <RouterLink :to="{ name: 'Chambre' }"
+      <RouterLink :to="{ name: 'Home' }"
         class="mt-4 inline-block text-lg font-semibold py-3 px-8 rounded-full bg-[#FE8A24] text-white transition-all hover:bg-[#09012B] hover:scale-105">
         Retour accueil
       </RouterLink>
@@ -34,7 +34,7 @@ const phrases = [
   "Seul ou avec des amis, profitez d'une belle balade en Kayak",
   "Visitez le bagne, une expérience unique",
   "Découvrez la région à cheval et ses paysages inoubliables",
-  "Notre restaurant vous propose de déliciaux plats locaux",
+  "Notre restaurant vous propose de délicieux plats locaux",
   "La garderie pour vos enfants est ouverte tous les jours"
 ]
 

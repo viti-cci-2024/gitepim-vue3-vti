@@ -5,9 +5,10 @@
     <div class="max-w-7xl mx-auto flex flex-col justify-center items-start h-full p-5">
       <!-- Contenu texte en blanc aligné à gauche -->
       <div class="text-white text-left">
-        <h1 class="mb-3 text-shadow text-4xl font-bold">Envie d’une escapade en amoureux ou d’un moment de calme ?</h1>
+        <h1 class="mb-3 text-shadow text-4xl font-bold">Besoin une excursion entre entre amoureux ou d’un moment de
+          calme ?</h1>
         <h4 class="mb-3 text-shadow text-2xl">
-          Notre équipe sera heureuse de prendre en charge vos petits bouts !
+          Notre équipe sera heureuse de prendre en charge vos petits bouts !
         </h4>
         <!-- Bouton Réservez via RouterLink vers la page "Chambre" -->
         <RouterLink :to="{ name: 'GarderieResa' }"
@@ -24,9 +25,7 @@
 
   <!------------------------- LES 2 CARDS ------------------------------>
 
-
-
-
+  <template>
   <section class="w-full bg-cover bg-center bg-[#605bf1]/10 pt-25 pb-20 mb-10">
     <!-- Conteneur principal responsive -->
     <div class="flex flex-col md:flex-row justify-around gap-6">
@@ -65,6 +64,17 @@
 
     </div>
   </section>
+</template>
+
+<script>
+export default {
+  name: 'GarderieSection'
+}
+</script>
+
+<style scoped>
+/* Vous pouvez ajouter d'autres styles personnalisés ici */
+</style>
 
 
 
@@ -181,11 +191,7 @@
 
 
 </template>
-<script>
-export default {
-  name: 'GarderieSection'
-}
-</script>
+
 <style scoped>
 /* Tu peux garder ce bloc si tu veux ajouter des styles perso */
 </style>

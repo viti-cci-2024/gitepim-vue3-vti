@@ -23,19 +23,32 @@
     </div>
   </section>
 
-  <!-- Section Présentation -->
+
   <section class="bg-[#605bf1]/10 py-20">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">
+      <h2 class="text-3xl text-left font-bold mb-8">
         Vivez une aventure équestre inoubliable !
       </h2>
-      <div class="max-w-2xl mx-auto">
-        <div class="bg-white p-8 rounded-xl shadow-lg">
-          <h4 class="font-bold text-lg mb-2">
-            Partez à la découverte de la faune et de la flore locales lors d'une expérience exceptionnelle à dos de cheval.
-            Choisissez votre cheval parmi nos 16 compagnons, chacun avec son propre caractère, et suivez un itinéraire enchanteur
-            à travers des paysages verdoyants, jusqu'à un point de vue offrant un panorama à couper le souffle.
-          </h4>
+      <!-- Conteneur flex qui réordonne les éléments en fonction du breakpoint -->
+      <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+        <!-- Bloc texte : en mobile, affiché en premier ; sur desktop, à droite -->
+        <div class="order-1 md:order-2 flex-1">
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <h4 class="font-medium text-lg mb-2">
+              Partez à la découverte de la faune et de la flore locales lors d'une expérience exceptionnelle à dos de cheval.
+              Choisissez votre cheval parmi nos 16 compagnons, chacun avec son propre caractère, et suivez un itinéraire enchanteur
+              à travers des paysages verdoyants, jusqu'à un point de vue offrant un panorama à couper le souffle.
+            </h4>
+          </div>
+        </div>
+        <!-- Bloc image : en mobile, affiché en deuxième ; sur desktop, à gauche -->
+        <!-- Le conteneur de l'image a une largeur fixe et ne peut pas se réduire -->
+        <div class="order-2 md:order-1 flex-shrink-0">
+          <img
+            src="/cheval/horse-ride-left.webp"
+            alt="Aventure équestre"
+            class="w-[350px] h-auto object-contain"
+          />
         </div>
       </div>
     </div>
@@ -117,7 +130,7 @@
     <!------------------------- BANDEAU PRE-FOOTER ------------------------------>
  
     <section
-  class="w-full h-[30vh] bg-[center_23%] bg-cover flex items-center justify-center bg-gray-500 bg-blend-multiply"
+  class="w-full h-[40vh] md:h-[30vh] bg-[center_23%] bg-cover flex items-center justify-center bg-gray-500 bg-blend-multiply"
   :style="{ backgroundImage: 'url(/cheval/herofooter2.png)' }"
 >
   <div class="text-center">

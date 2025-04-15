@@ -46,25 +46,26 @@
         />
       </div>
 
-      <!-- Bloc météo pour le repas -->
-      <div
-        v-if="serviceDate"
-        class="mb-4 p-4 border rounded shadow-md"
-      >
-        <p class="font-medium">
-          Prévision météo pour votre repas le {{ serviceDate }} :
-        </p>
-        <div v-if="serviceWeatherLoading">
-          Chargement de la météo...
-        </div>
-        <div v-else-if="serviceForecast">
-          <p class="capitalize">{{ serviceForecast.description }}</p>
-          <p class="text-2xl">{{ serviceForecast.temp }}°C</p>
-        </div>
-        <div v-else>
-          Aucune donnée météo disponible pour cette date.
-        </div>
-      </div>
+<!-- Bloc météo pour le repas -->
+<div
+  v-if="serviceDate"
+  class="mb-4 p-4 border rounded shadow-md"
+>
+  <p class="font-medium">
+    Prévision météo pour votre repas le {{ serviceDate }} :
+  </p>
+  <div v-if="serviceWeatherLoading">
+    Chargement de la météo...
+  </div>
+  <div v-else-if="serviceForecast">
+    <p class="capitalize">{{ serviceForecast.description }}</p>
+    <p class="text-2xl">{{ Math.round(serviceForecast.temp) }}°C</p>
+  </div>
+  <div v-else>
+    Aucune donnée météo disponible pour cette date.
+  </div>
+</div>
+
 
       <!-- Choix du service (petit-déjeuner, déjeuner, dîner) -->
       <div class="mb-4">

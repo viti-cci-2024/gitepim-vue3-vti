@@ -38,20 +38,22 @@
           />
         </div>
         
-        <!-- Bloc météo -->
-        <div v-if="garderieDate" class="mb-4 p-4 border rounded shadow-md">
-          <p class="font-medium">Prévision météo pour le {{ garderieDate }} :</p>
-          <div v-if="dateWeatherLoading">
-            Chargement de la météo...
-          </div>
-          <div v-else-if="dateForecast">
-            <p class="capitalize">{{ dateForecast.description }}</p>
-            <p class="text-2xl">{{ dateForecast.temp }}°C</p>
-          </div>
-          <div v-else>
-            Aucune donnée météo disponible pour cette date.
-          </div>
-        </div>
+<!-- Bloc météo pour la date de la randonnée -->
+<div v-if="date" class="mb-4 p-4 border rounded shadow-md">
+  <p class="font-medium">
+    Prévision météo pour le {{ date }} :
+  </p>
+  <div v-if="dateWeatherLoading">
+    Chargement de la météo...
+  </div>
+  <div v-else-if="dateForecast">
+    <p class="capitalize">{{ dateForecast.description }}</p>
+    <p class="text-2xl">{{ Math.round(dateForecast.temp) }}°C</p>
+  </div>
+  <div v-else>
+    Aucune donnée météo disponible pour cette date.
+  </div>
+</div>
         
         <!-- Sélection de l'horaire de garderie -->
         <div class="mb-4">

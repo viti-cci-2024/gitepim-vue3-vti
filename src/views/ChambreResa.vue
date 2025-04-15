@@ -27,7 +27,7 @@
         <div class="flex-1">
           <WeatherWidget />
           <br>
-          <p class="mb-3"><strong>Important : Pour réserver une activité, vous aurez besoin de votre numéro de réservation de chambre.
+          <p class="mb-3"><strong><span class="text-orange-500">Important :</span> Pour réserver une activité, vous aurez besoin de votre numéro de réservation de chambre.
               Pensez à bien noter ce numéro qui vous sera donné après la validation du formulaire</strong></p>
 
         </div>

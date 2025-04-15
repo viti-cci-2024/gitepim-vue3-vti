@@ -76,24 +76,24 @@
 
 
   <!-- BANDEAU PRE-FOOTER avec le slider -->
-  <section class="w-full h-[30vh] bg-center bg-cover flex items-center justify-center bg-gray-500 bg-blend-multiply"
+  <section class="w-full h-[40vh] md:h-[30vh] bg-center bg-cover flex items-center px-2 justify-center bg-gray-500 bg-blend-multiply"
     :style="{ backgroundImage: 'url(/bagne/bagne-3.jpg)' }">
     <div class="text-center">
       <h1 class="mb-3 text-white text-4xl font-bold">
-        Réservez votre visite !
+        Réservez votre visite !
       </h1>
       <!-- Conteneur du slider : position relative et overflow-hidden -->
       <div class="relative h-16">
         <transition name="slide" mode="out-in">
           <p :key="currentIndex"
-            class="absolute inset-0 flex items-center justify-center text-2xl font-semibold text-white whitespace-nowrap">
+            class="absolute inset-0 flex items-center justify-center text-2xl font-semibold text-white whitespace-normal md:whitespace-nowrap">
             {{ currentPhrase }}
           </p>
         </transition>
       </div>
       <RouterLink :to="{ name: 'BagneResa' }"
         class="mt-4 inline-block text-lg font-semibold py-3 px-8 rounded-full bg-[#FE8A24] text-white transition-all hover:bg-[#09012B] hover:scale-105">
-        Je réserve !
+        Je réserve !
       </RouterLink>
     </div>
   </section>

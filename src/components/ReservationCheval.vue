@@ -46,22 +46,22 @@
         />
       </div>
 
-      <!-- Bloc météo pour la date de la randonnée -->
-      <div v-if="date" class="mb-4 p-4 border rounded shadow-md">
-        <p class="font-medium">
-          Prévision météo pour votre sortie le {{ date }} :
-        </p>
-        <div v-if="dateWeatherLoading">
-          Chargement de la météo...
-        </div>
-        <div v-else-if="dateForecast">
-          <p class="capitalize">{{ dateForecast.description }}</p>
-          <p class="text-2xl">{{ dateForecast.temp }}°C</p>
-        </div>
-        <div v-else>
-          Aucune donnée météo disponible pour cette date.
-        </div>
-      </div>
+<!-- Bloc météo pour la date de la randonnée -->
+<div v-if="date" class="mb-4 p-4 border rounded shadow-md">
+  <p class="font-medium">
+    Prévision météo pour votre sortie le {{ date }} :
+  </p>
+  <div v-if="dateWeatherLoading">
+    Chargement de la météo...
+  </div>
+  <div v-else-if="dateForecast">
+    <p class="capitalize">{{ dateForecast.description }}</p>
+    <p class="text-2xl">{{ Math.round(dateForecast.temp) }}°C</p>
+  </div>
+  <div v-else>
+    Aucune donnée météo disponible pour cette date.
+  </div>
+</div>
 
       <!-- Choix du créneau horaire -->
       <div class="mb-4">
@@ -100,7 +100,7 @@
       <!-- Sélection des chevaux via thumbnails -->
       <div v-if="date && timeslot" class="mb-4 p-4 border rounded shadow-md">
         <p class="font-medium mb-2">
-          Choisissez vos {{ participants }} cheval(x) parmi ceux disponibles :
+          Choisissez {{ participants }} compagnon(s) de route parmi ceux disponibles :
         </p>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
           <div
@@ -136,7 +136,7 @@
       <p v-if="submitError" class="text-red-500 mt-2">{{ submitError }}</p>
 
       <!-- Toast pour avertir si le nombre maximum de chevaux sélectionnables est dépassé -->
-      <div v-if="toastMessage" class="fixed bottom-4 right-4 bg-black text-white px-4 py-2 rounded shadow-lg z-50">
+      <div v-if="toastMessage" class="fixed bottom-20 left-4 bg-orange-500 text-white px-6 py-3 text-lg font-bold rounded shadow-lg z-50">
         {{ toastMessage }}
       </div>
     </div>
@@ -255,7 +255,7 @@ function showToast(message) {
   toastMessage.value = message;
   setTimeout(() => {
     toastMessage.value = '';
-  }, 3000);
+  }, 4000);
 }
 
 // Watch sur participants pour détecter si la valeur devient inférieure au nombre de chevaux déjà sélectionnés

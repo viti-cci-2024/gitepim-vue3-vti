@@ -135,11 +135,11 @@
   <!------------------------- BANDEAU PRE-FOOTER ------------------------------>
 
   <section
-    class="w-full h-[30vh] bg-cover bg-[center_90%]  flex items-center justify-center bg-gray-500 bg-blend-multiply"
+    class="w-full h-[40vh] md:h-[30vh] bg-cover bg-[center_90%]  flex items-center justify-center bg-gray-500 bg-blend-multiply"
     :style="{ backgroundImage: 'url(/kayak/image-1.jpg)' }">
     <div class="text-center">
       <h1 class="mb-3 text-white text-4xl font-bold">
-        Réservez votre sortie en kayak !
+        Réservez votre sortie en kayak !
       </h1>
       <!-- Bouton Réservez via RouterLink vers la page "Chambre" -->
       <RouterLink :to="{ name: 'KayakResa' }"
