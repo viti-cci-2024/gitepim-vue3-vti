@@ -2,28 +2,17 @@
   <div class="reservation-cheval p-4">
     <h2 class="text-2xl font-bold mb-4">Veuillez compléter ce formulaire</h2>
 
-<!-- Étape 1 : Vérification du numéro de réservation de chambre -->
-<div v-if="step === 1">
-  <p class="mb-2 font-medium flex items-center">
-    Entrez votre numéro de réservation de chambre :
-    <!-- Icône d'information avec tooltip en CSS uniquement -->
-    <span tabindex="0" class="relative group ml-2">
-      <!-- Icône "i" -->
-      <span class="flex items-center justify-center w-6 h-6 text-blue-500 border border-blue-500 rounded-full cursor-pointer">
-        i
-      </span>
-      <!-- Tooltip s'affichant au survol ou quand l'élément est focus -->
-      <div class="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 hidden group-hover:block group-focus:block bg-gray-700 text-white text-sm rounded py-2 px-3 w-80 z-10">
-        Pour réserver votre sortie équestre, vous avez besoin de votre numéro de réservation de chambre. Si vous n'en avez pas encore un, veuillez d'abord réserver votre chambre.
-      </div>
-    </span>
-  </p>
-  <input
-    v-model="roomReservationNumber"
-    type="text"
-    placeholder="Ex : CH25040013"
-    class="border px-2 py-1 w-full"
-  />
+    <!-- Étape 1 : Vérification du numéro de réservation de chambre -->
+    <div v-if="step === 1">
+      <p class="mb-2 font-medium">
+        Entrez votre numéro de réservation de chambre :
+      </p>
+      <input
+        v-model="roomReservationNumber"
+        type="text"
+        placeholder="Ex : CH25040013"
+        class="border px-2 py-1 w-full"
+      />
       <button
         @click="checkRoomReservation"
         class="bg-blue-500 text-white px-4 py-2 rounded mt-2"
