@@ -4,7 +4,7 @@
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <!-- Logo / Lien vers l'accueil -->
       <RouterLink :to="{ name: 'Home' }" class="flex items-center">
-        <img src="/logo-gite-BLANC.png" alt="Accueil" class="w-40 h-auto hover:scale-110 transition-transform duration-300" title="Accueil" />
+        <img src="/logo-gite-BLANC.webp" alt="Accueil" class="w-40 h-auto hover:scale-110 transition-transform duration-300" title="Accueil" />
       </RouterLink>
 
       <!-- Bouton hamburger (mobile) -->

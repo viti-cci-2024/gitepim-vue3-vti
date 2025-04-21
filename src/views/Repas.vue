@@ -1,6 +1,6 @@
 <template>
   <!-- Section hero pleine largeur avec background et hauteur 60vh -->
-  <section class="w-full h-[60vh] bg-cover bg-center  bg-gray-400 bg-blend-multiply" :style="{ backgroundImage: 'url(/repas/repas-hero.jpg)' }">
+  <section class="w-full h-[60vh] bg-cover bg-center  bg-gray-400 bg-blend-multiply" :style="{ backgroundImage: 'url(/repas/repas-hero.webp)' }">
     <!-- Conteneur pour centrer verticalement le contenu avec padding -->
     <div class="max-w-7xl mx-auto flex flex-col justify-center items-start h-full p-5">
       <!-- Contenu texte en blanc aligné à gauche -->
@@ -38,7 +38,7 @@
 
       <!-- Image cocktail : affichée uniquement sur ≥1024px, au-dessus de l’image du bar -->
       <img
-        src="/repas/cocktail.png"
+        src="/repas/cocktail.webp"
         alt="verre à cocktail"
         class="hidden lg:block absolute top-1/2 right-[5%] transform -translate-y-1/2 w-[400px] object-contain h-auto z-10"
       />

@@ -1,6 +1,6 @@
 <template>
   <!-- Section hero pleine largeur avec background et hauteur 60vh -->
-  <section class="w-full h-[60vh] bg-cover bg-center" :style="{ backgroundImage: 'url(/garderie/garderie-hero.jpg)' }">
+  <section class="w-full h-[60vh] bg-cover bg-center" :style="{ backgroundImage: 'url(/garderie/garderie-hero.webp)' }">
     <!-- Conteneur pour centrer verticalement le contenu avec padding -->
     <div class="max-w-7xl mx-auto flex flex-col justify-center items-start h-full p-5">
       <!-- Contenu texte en blanc aligné à gauche -->
@@ -86,7 +86,7 @@
           <div class="absolute inset-0 flex flex-col justify-center md:p-0">
             <h2 class="text-3xl font-bold">Julie</h2>
             <br />
-            <h4 class="font-bold text-lg mb-2">
+            <h4 class="text-lg md:text-xl mb-2">
               Bonjour, je travaille aujourd'hui dans la garderie de ce gîte. Ancienne puéricultrice, j'ai passé
               plusieurs années à accompagner les tout-petits dans leurs premiers pas. J'adore organiser des activités
               ludiques en plein air dans notre magnifique gite. Au plaisir de vous rencontrer et de partager ces moments
@@ -95,7 +95,7 @@
           </div>
         </div>
         <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center rounded-xl shadow-lg"
-          style="background-image: url('/garderie/garderie01.jpg')"></div>
+          style="background-image: url('/garderie/garderie01.webp')"></div>
       </div>
     </div>
   </section>
@@ -105,12 +105,12 @@
     <div class="max-w-7xl mx-auto">
       <div class="flex flex-col md:flex-row justify-around gap-6">
         <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center rounded-xl shadow-lg"
-          style="background-image: url('/garderie/garderie02.jpg')"></div>
+          style="background-image: url('/garderie/garderie02.webp')"></div>
         <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center">
           <div class="absolute inset-0 flex flex-col justify-center md:p-0">
             <h2 class="text-3xl font-bold">Emilie</h2>
             <br />
-            <h4 class="font-bold text-lg mb-2 pb-2">
+            <h4 class="text-lg md:text-xl mb-2 pb-2">
               Ancienne professeure de collège, j'ai passé plusieurs années à transmettre des connaissances et soutenir
               les enfants pendant leurs apprentissages. Je propose des activités ludiques et éducatives pour rendre
               l’apprentissage et amusant. Au plaisir de vous accueillir et de partager ces instants précieux avec vos
@@ -139,7 +139,7 @@
       <!-- Texte à gauche -->
       <div class="md:w-1/2 flex flex-col justify-center md:ms-25">
         <h2 class="text-3xl text-white font-bold mb-6">Pour s'inscrire à la garderie ouverte 24h/24 :</h2>
-        <ul class="list-disc list-inside space-y-4 text-lg text-white">
+        <ul class="list-disc list-inside space-y-4 text-lg md:text-xl text-white">
           <li>Votre numéro de chambre</li>
           <li>Heure de début et de fin</li>
           <li>Pas plus de 4h d'affilée</li>

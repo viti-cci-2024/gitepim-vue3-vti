@@ -1,6 +1,6 @@
 <template>
   <!-- Section hero pleine largeur avec background et hauteur 60vh -->
-  <section class="w-full h-[60vh] bg-cover bg-center" :style="{ backgroundImage: 'url(/bagne/bagne-hero.png)' }">
+  <section class="w-full h-[60vh] bg-cover bg-center" :style="{ backgroundImage: 'url(/bagne/bagne-hero.webp)' }">
     <!-- Conteneur pour centrer verticalement le contenu avec padding -->
     <div class="max-w-7xl mx-auto flex flex-col justify-center items-start h-full p-5">
       <!-- Contenu texte en blanc aligné à gauche -->
@@ -29,7 +29,7 @@
           <div class="absolute inset-0 flex flex-col justify-center p-4 md:p-6">
             <h2 class="text-3xl font-bold">Plongez dans l'histoire</h2>
             <br />
-            <h4 class="font-bold text-lg mb-2">
+            <h4 class="text-lg md:text-xl mb-2">
               Avant de commencer la visite, laissez-vous transporter par l'atmosphère unique de ces vestiges du passé.
               Chaque pierre raconte une histoire qui ne demande qu'à être entendue.
             </h4>
@@ -51,10 +51,10 @@
           <div class="absolute inset-0 flex flex-col justify-center p-4 md:p-6">
             <h2 class="text-3xl font-bold">Une expérience unique</h2>
             <br />
-            <h4 class="font-bold text-lg mb-2 pb-2">
+            <h4 class="text-lg md:text-xl mb-2 pb-2">
               Explorez les ruines et découvrez les récits poignants des anciens détenus. La visite du bagne est bien
               plus qu'un simple voyage dans le passé : c'est une immersion dans une histoire riche en émotions.
-            </h4>
+            </h4><br>
             <ul class="space-y-4">
               <li class="pb-2 border-b border-gray-300 last:border-0">
                 ⏳ Durée de la visite : 90 minutes
@@ -77,7 +77,7 @@
 
   <!-- BANDEAU PRE-FOOTER avec le slider -->
   <section class="w-full h-[50vh] md:h-[40vh] bg-center bg-cover flex items-center px-2 justify-center bg-gray-500 bg-blend-multiply"
-    :style="{ backgroundImage: 'url(/bagne/bagne-3.jpg)' }">
+    :style="{ backgroundImage: 'url(/bagne/bagne-3.webp)' }">
     <div class="text-center">
       <h1 class="mb-3 text-white text-4xl font-bold">
         Réservez votre visite !

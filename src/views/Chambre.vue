@@ -28,25 +28,25 @@
       <div class="grid grid-cols-1 gap-y-6">
         <!-- Première image occupant toute la largeur -->
         <div>
-          <img src="/chambre/Bungalow-Jardin-03.png" alt="Bungalow Jardin"
+          <img src="/chambre/Bungalow-Jardin-03.webp" alt="Bungalow Jardin"
             class="w-full h-72 md:h-96 object-cover rounded-lg shadow-md" />
         </div>
 
         <!-- Grille responsive pour les deux images suivantes -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <img src="/chambre/Bungalow-Mer-03.png" alt="Bungalow Mer"
+            <img src="/chambre/Bungalow-Mer-03.webp" alt="Bungalow Mer"
               class="w-full h-80 object-cover rounded-lg shadow-md" />
           </div>
           <div>
-            <img src="/chambre/Bungalow-Jardin-01.png" alt="Bungalow Jardin"
+            <img src="/chambre/Bungalow-Jardin-01.webp" alt="Bungalow Jardin"
               class="w-full h-80 object-cover rounded-lg shadow-md" />
           </div>
         </div>
 
         <!-- Dernière image occupant toute la largeur -->
         <div>
-          <img src="/chambre/Bungalow-Jardin-03.png" alt="Bungalow Jardin"
+          <img src="/chambre/Bungalow-Jardin-03.webp" alt="Bungalow Jardin"
             class="w-full h-72 md:h-96 object-cover rounded-lg shadow-md" />
         </div>
       </div>
@@ -64,14 +64,14 @@
         <div v-if="showMer" key="mer" class="absolute inset-0 flex flex-col md:flex-row justify-around gap-6">
           <!-- Image à gauche avec coins arrondis à droite -->
           <div class="relative w-full md:w-1/2 h-full bg-cover bg-center rounded-tr-lg rounded-br-lg shadow-lg"
-            style="background-image: url('/chambre/Bungalow-Mer-01.png')"></div>
+            style="background-image: url('/chambre/Bungalow-Mer-01.webp')"></div>
           <!-- Texte à droite -->
           <div class="relative w-full md:w-1/2 h-full bg-cover bg-center">
             <div class="absolute inset-0 flex flex-col justify-center p-4 md:p-6">
               <h2 class="text-3xl font-bold">
                 Vivez une expérience unique face à l’océan.
               </h2>
-              <h4 class="mt-4 font-bold text-lg">
+              <h4 class="mt-4 text-lg md:text-xl">
                 Ces 5 bungalows Mer vous accueillent dans un cadre apaisant, mêlant élégance et confort. Leur décoration
                 lumineuse, touches de bois naturel et grandes baies vitrées offrent une vue imprenable sur la mer, avec
                 une terrasse privée pour admirer le coucher du soleil.
@@ -88,7 +88,7 @@
               <h2 class="text-3xl font-bold">
                 Découvrez 10 bungalows jardin exceptionnels.
               </h2>
-              <h4 class="mt-4 font-bold text-lg">
+              <h4 class="mt-4 text-lg md:text-xl">
                 Nichés au cœur d’un jardin luxuriant, ces 10 bungalows offrent un véritable havre de paix. Alliant
                 charme naturel et confort moderne, chaque bungalow bénéficie d’un design soigné, d’un accès direct à des
                 espaces verts fleuris et d’installations haut de gamme pour des instants inoubliables.
@@ -97,7 +97,7 @@
           </div>
           <!-- Image à droite avec coins arrondis à gauche -->
           <div class="relative w-full md:w-1/2 h-full bg-cover bg-center rounded-tl-lg rounded-bl-lg shadow-lg"
-            style="background-image: url('/chambre/Bungalow-Jardin-01.png')"></div>
+            style="background-image: url('/chambre/Bungalow-Jardin-01.webp')"></div>
         </div>
       </transition>
     </div>

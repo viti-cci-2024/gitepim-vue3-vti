@@ -21,7 +21,7 @@
       <h2 class="text-3xl font-bold">Nos Bungalows</h2><br>
       <div class="flex flex-col md:flex-row justify-around gap-6">
         <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center rounded-xl shadow-lg overflow-hidden"
-          style="background-image: url('/chambre/Bungalow-Jardin-01.png')">
+          style="background-image: url('/chambre/Bungalow-Jardin-01.webp')">
 
           <!-- Calque sombre -->
           <div class="absolute inset-0 bg-black/40 z-0"></div>
@@ -39,7 +39,7 @@
         </div>
 
         <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center rounded-xl shadow-lg overflow-hidden"
-          style="background-image: url('/chambre/Bungalow-Mer-01.png')">
+          style="background-image: url('/chambre/Bungalow-Mer-01.webp')">
 
           <!-- Calque foncé -->
           <div class="absolute inset-0 bg-black/40 z-0"></div>
@@ -152,7 +152,7 @@
 
   <section
     class="w-full h-[40vh] md:h-[30vh] bg-cover bg-[center_65%]  flex items-center justify-center bg-gray-500 bg-blend-multiply"
-    :style="{ backgroundImage: 'url(/chambre/Bungalow-Jardin-05.png)' }">
+    :style="{ backgroundImage: 'url(/chambre/Bungalow-Jardin-05.webp)' }">
     <div class="text-center">
       <h1 class="mb-3 text-white text-4xl font-bold">
         Réservez votre bungalow !
@@ -179,7 +179,7 @@ import { RouterLink } from 'vue-router'
 
 // Vos items de carousel
 const items = [
-  { title: 'Visite du bagne', text: "Replongez avec notre guide dans l'histoire du pays sur l'île de Pam.", image: '/carou-bagne.jpg', link: { name: 'Bagne' } },
+  { title: 'Visite du bagne', text: "Replongez avec notre guide dans l'histoire du pays sur l'île de Pam.", image: '/carou-bagne.webp', link: { name: 'Bagne' } },
   { title: 'Randonnée équestre', text: "De belles balades dans la nature avec notre guide. À ne pas manquer !", image: '/carou-cheval.jpg', link: { name: 'Cheval' } },
   { title: 'Notre garderie', text: "Confiez-nous avec sérénité vos enfants pendant vos activités sportives ou de repos.", image: '/carou-gard.jpg', link: { name: 'Garderie' } },
   { title: 'Club nautique', text: "Balades en famille ou avec vos amis, détente ou sportive en kayak sur le lagon.", image: '/carou-kayak.jpg', link: { name: 'Kayak' } },

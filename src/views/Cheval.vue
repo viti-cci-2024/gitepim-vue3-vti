@@ -2,7 +2,7 @@
 <!-- Section hero pleine largeur avec background et hauteur 60vh -->
 <section
     class="w-full h-[60vh] bg-cover bg-center"
-    :style="{ backgroundImage: 'url(/cheval/cheval-hero.jpg)' }"
+    :style="{ backgroundImage: 'url(/cheval/cheval-hero.webp)' }"
   >
     <!-- Conteneur pour centrer verticalement le contenu avec padding -->
     <div class="max-w-7xl mx-auto flex flex-col justify-center items-start h-full p-5">
@@ -68,7 +68,7 @@
           <div class="absolute inset-0 flex flex-col justify-center  md:p-6">
             <h2 class="text-3xl font-bold">Emma et Nidguep (Matin)</h2>
             <br />
-            <h4 class="text-lg mb-2">
+            <h4 class="text-lg md:text-xl mb-2">
             Passionnée d'équitation et certifiée en randonnée, Emma guide les groupes le matin avec son cheval Nidguepe, un compagnon calme et réactif.
             Avec son expérience, elle assure une randonnée sereine et enrichissante à travers des paysages magnifiques.
             </h4>
@@ -85,12 +85,12 @@
     <div class="max-w-7xl mx-auto">
       <div class="flex flex-col md:flex-row justify-around gap-6">
         <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-[center_1%] rounded-xl shadow-lg"
-          style="background-image: url('/cheval/Lucas.jpg')"></div>
+          style="background-image: url('/cheval/Lucas.webp')"></div>
         <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center">
           <div class="absolute inset-0 flex flex-col justify-center p-4 md:p-6">
             <h2 class="text-3xl font-bold">Lucas et Papyrus (Après-midi)</h2>
             <br />
-            <h4 class="text-lg mb-2 pb-2">
+            <h4 class="text-lg md:text-xl mb-2 pb-2">
             Lucas, certifié en gestion de randonnées, prend le relais l'après-midi avec son cheval Papyrus, vif et élégant.
             Ensemble, ils offrent une expérience immersive et conviviale, où chaque randonneur profite pleinement de l'aventure.
             </h4>
@@ -131,7 +131,7 @@
  
     <section
   class="w-full h-[40vh] md:h-[30vh] bg-[center_23%] bg-cover flex items-center justify-center bg-gray-500 bg-blend-multiply"
-  :style="{ backgroundImage: 'url(/cheval/herofooter2.png)' }"
+  :style="{ backgroundImage: 'url(/cheval/herofooter2.webp)' }"
 >
   <div class="text-center">
     <h1 class="mb-3 text-white text-4xl font-bold">

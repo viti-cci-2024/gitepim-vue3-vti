@@ -5,7 +5,7 @@
         <!-- Colonne 1: Contact -->
         <div class="md:w-1/3">
           <RouterLink :to="{ name: 'Home' }" class="flex items-center">
-        <img src="/logo-gite-BLANC.png" alt="Accueil" class="w-48 mb-4 hover:scale-110 transition-transform duration-300" title="Accueil" />
+        <img src="/logo-gite-BLANC.webp" alt="Accueil" class="w-48 mb-4 hover:scale-110 transition-transform duration-300" title="Accueil" />
       </RouterLink>
           <h6 class="uppercase font-bold mb-3">Contact</h6>
           <p class="hover:text-yellow-400 transition-colors duration-300">
