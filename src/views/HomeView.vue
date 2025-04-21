@@ -69,20 +69,28 @@
       </div>
 
       <div class="relative overflow-hidden">
-        <!-- Boutons de navigation -->
-        <button @click="prev" :disabled="isAnimating"
-          class="absolute top-1/2 left-0 -translate-y-1/2 bg-white text-gray-800 p-4 rounded-full shadow-lg hover:bg-gray-100 transition z-10">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <!-- Bouton précédent -->
+        <button @click="prev" :disabled="isAnimating" class="absolute top-1/2 left-0 -translate-y-[90%]
+           bg-white p-4 rounded-full shadow-lg
+           hover:bg-gray-100 transition z-10
+           flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-800" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
           </svg>
         </button>
 
-        <button @click="next" :disabled="isAnimating"
-          class="absolute top-1/2 right-0 -translate-y-1/2 bg-white text-gray-800 p-4 rounded-full shadow-lg hover:bg-gray-100 transition z-10">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <!-- Bouton suivant -->
+        <button @click="next" :disabled="isAnimating" class="absolute top-1/2 right-0 -translate-y-[90%]
+           bg-white p-4 rounded-full shadow-lg
+           hover:bg-gray-100 transition z-10
+           flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-800" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
           </svg>
         </button>
+
 
         <!-- Carousel -->
         <div class="flex transition-transform duration-500 ease-in-out" :style="{
@@ -112,13 +120,13 @@
   <!------------------------- SEPARATION ------------------------------>
 
   <section class="w-full h-[25vh] bg-cover bg-start mb-8 flex items-center justify-center"
-         :style="{ backgroundImage: 'url(/sep-accueil.webp)' }">
-  <div class="text-center">
-    <span class="mb-3 text-white text-4xl md:text-5xl font-bold">
-      Vivez une expérience unique !
-    </span>
-  </div>
-</section>
+    :style="{ backgroundImage: 'url(/sep-accueil.webp)' }">
+    <div class="text-center">
+      <span class="mb-3 text-white text-4xl md:text-5xl font-bold">
+        Vivez une expérience unique !
+      </span>
+    </div>
+  </section>
 
 
   <!------------------------- TEMOIGNAGES ------------------------------>
