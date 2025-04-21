@@ -1,6 +1,6 @@
 <template>
   <!------------------------- NEW HERO RESA CHAMBRE ------------------------------>
-  <section class="w-full h-[40vh] md:h-[30vh] bg-cover bg-center" :style="{ backgroundImage: 'url(/chambre/hero-chambre.jpg)' }">
+  <section class="w-full h-[50vh] md:h-[30vh] bg-cover bg-center" :style="{ backgroundImage: 'url(/chambre/hero-chambre.jpg)' }">
     <!-- Conteneur pour centrer verticalement le contenu avec padding -->
     <div class="max-w-7xl mx-auto flex flex-col justify-center items-start h-full p-5">
       <!-- Contenu texte en blanc aligné à gauche -->

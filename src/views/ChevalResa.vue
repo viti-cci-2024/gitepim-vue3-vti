@@ -1,7 +1,7 @@
 <template>
 <!-- Section hero pleine largeur avec background et hauteur 60vh -->
 <section
-    class="w-full h-[40vh] md:h-[30vh] bg-cover bg-[center_20%] bg-gray-400 bg-blend-multiply"
+    class="w-full h-[50vh] md:h-[30vh] bg-cover bg-[center_20%] bg-gray-400 bg-blend-multiply"
     :style="{ backgroundImage: 'url(/cheval/herofooter2.webp)' }"
   >
     <!-- Conteneur pour centrer verticalement le contenu avec padding -->
