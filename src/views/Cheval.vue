@@ -68,7 +68,7 @@
           <div class="absolute inset-0 flex flex-col justify-center  md:p-6">
             <h2 class="text-3xl font-bold">Emma et Nidguep (Matin)</h2>
             <br />
-            <h4 class="font-bold text-lg mb-2">
+            <h4 class="text-lg mb-2">
             Passionnée d'équitation et certifiée en randonnée, Emma guide les groupes le matin avec son cheval Nidguepe, un compagnon calme et réactif.
             Avec son expérience, elle assure une randonnée sereine et enrichissante à travers des paysages magnifiques.
             </h4>
@@ -90,7 +90,7 @@
           <div class="absolute inset-0 flex flex-col justify-center p-4 md:p-6">
             <h2 class="text-3xl font-bold">Lucas et Papyrus (Après-midi)</h2>
             <br />
-            <h4 class="font-bold text-lg mb-2 pb-2">
+            <h4 class="text-lg mb-2 pb-2">
             Lucas, certifié en gestion de randonnées, prend le relais l'après-midi avec son cheval Papyrus, vif et élégant.
             Ensemble, ils offrent une expérience immersive et conviviale, où chaque randonneur profite pleinement de l'aventure.
             </h4>
