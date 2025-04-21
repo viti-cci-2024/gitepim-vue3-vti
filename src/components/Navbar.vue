@@ -4,18 +4,44 @@
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <!-- Logo / Lien vers l'accueil -->
       <RouterLink :to="{ name: 'Home' }" class="flex items-center">
-        <img src="/logo-gite-BLANC.webp" alt="Accueil" class="w-40 h-auto hover:scale-110 transition-transform duration-300" title="Accueil" />
+        <img
+          src="/logo-gite-BLANC.webp"
+          alt="Accueil"
+          class="w-40 h-auto hover:scale-110 transition-transform duration-300"
+          title="Accueil"
+        />
       </RouterLink>
 
       <!-- Bouton hamburger (mobile) -->
-      <button @click="toggleMenu" class="lg:hidden bg-transparent text-white focus:outline-none"
-        aria-label="Toggle navigation">
-        <svg v-if="!isOpen" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
-          stroke-width="2" stroke="white" stroke-linecap="round" stroke-linejoin="round">
+      <button
+        @click="toggleMenu"
+        class="lg:hidden bg-transparent text-white focus:outline-none"
+        aria-label="Toggle navigation"
+      >
+        <svg
+          v-if="!isOpen"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-8 w-8"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="white"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
           <path d="M4 6h16M4 12h16M4 18h16" />
         </svg>
-        <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke-width="2"
-          stroke="white" stroke-linecap="round" stroke-linejoin="round">
+        <svg
+          v-else
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-8 w-8"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="white"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
           <path d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
@@ -44,32 +70,56 @@
     </div>
 
     <!-- Navigation Mobile -->
-    <transition @before-enter="beforeEnter" @enter="enter" @leave="leave">
-      <div v-show="isOpen" ref="mobileMenu" class="lg:hidden bg-transparent overflow-hidden">
-        <!-- Ajout de text-right, espace augmenté et texte plus gros -->
+    <transition
+      @before-enter="beforeEnter"
+      @enter="enter"
+      @after-enter="afterEnter"
+      @before-leave="beforeLeave"
+      @leave="leave"
+      @after-leave="afterLeave"
+    >
+      <div v-if="isOpen" ref="mobileMenu" class="lg:hidden overflow-hidden">
         <div class="px-6 pb-4 space-y-4 text-right">
-          <RouterLink @click="closeMenu" :to="{ name: 'Chambre' }"
-            class="block text-lg text-white hover:text-gray-300 transition">
+          <RouterLink
+            @click="closeMenu"
+            :to="{ name: 'Chambre' }"
+            class="block text-lg text-white hover:text-gray-300 transition"
+          >
             Nos chambres
           </RouterLink>
-          <RouterLink @click="closeMenu" :to="{ name: 'Repas' }"
-            class="block text-lg text-white hover:text-gray-300 transition">
+          <RouterLink
+            @click="closeMenu"
+            :to="{ name: 'Repas' }"
+            class="block text-lg text-white hover:text-gray-300 transition"
+          >
             Notre restaurant
           </RouterLink>
-          <RouterLink @click="closeMenu" :to="{ name: 'Cheval' }"
-            class="block text-lg text-white hover:text-gray-300 transition">
+          <RouterLink
+            @click="closeMenu"
+            :to="{ name: 'Cheval' }"
+            class="block text-lg text-white hover:text-gray-300 transition"
+          >
             Randonnée équestre
           </RouterLink>
-          <RouterLink @click="closeMenu" :to="{ name: 'Kayak' }"
-            class="block text-lg text-white hover:text-gray-300 transition">
+          <RouterLink
+            @click="closeMenu"
+            :to="{ name: 'Kayak' }"
+            class="block text-lg text-white hover:text-gray-300 transition"
+          >
             Sortie en kayak
           </RouterLink>
-          <RouterLink @click="closeMenu" :to="{ name: 'Bagne' }"
-            class="block text-lg text-white hover:text-gray-300 transition">
+          <RouterLink
+            @click="closeMenu"
+            :to="{ name: 'Bagne' }"
+            class="block text-lg text-white hover:text-gray-300 transition"
+          >
             Visite du bagne
           </RouterLink>
-          <RouterLink @click="closeMenu" :to="{ name: 'Garderie' }"
-            class="block text-lg text-white hover:text-gray-300 transition">
+          <RouterLink
+            @click="closeMenu"
+            :to="{ name: 'Garderie' }"
+            class="block text-lg text-white hover:text-gray-300 transition"
+          >
             La garderie
           </RouterLink>
         </div>
@@ -79,7 +129,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, nextTick } from 'vue'
 import { RouterLink } from 'vue-router'
 
 const isOpen = ref(false)
@@ -96,17 +146,32 @@ const closeMenu = () => {
 function beforeEnter(el) {
   el.style.height = '0'
 }
+
 function enter(el) {
   el.style.transition = 'height 0.3s ease'
-  requestAnimationFrame(() => {
+  nextTick(() => {
     el.style.height = el.scrollHeight + 'px'
   })
 }
+
+function afterEnter(el) {
+  // Une fois l'animation terminée, remettre la hauteur automatique
+  el.style.height = 'auto'
+}
+
+function beforeLeave(el) {
+  el.style.height = el.scrollHeight + 'px'
+}
+
 function leave(el) {
   el.style.transition = 'height 0.3s ease'
-  el.style.height = el.scrollHeight + 'px'
-  requestAnimationFrame(() => {
+  nextTick(() => {
     el.style.height = '0'
   })
+}
+
+function afterLeave(el) {
+  // Nettoyage du style inline
+  el.style.height = ''
 }
 </script>
