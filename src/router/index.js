@@ -13,6 +13,8 @@ import GarderieResa from '../views/GarderieResa.vue'
 import KayakResa from '../views/KayakResa.vue'
 import RepasResa from '../views/RepasResa.vue'
 import NotFound from '../views/Error404View.vue' // pour 404
+import KioskLayout  from '../kiosk/KioskLayout.vue';
+import HomeKiosk    from '../kiosk/HomeKiosk.vue';
 
 const routes = [
   { path: '/', name: 'Home', component: HomeView },
@@ -28,7 +30,15 @@ const routes = [
   { path: '/garderieresa', name: 'GarderieResa', component: GarderieResa },
   { path: '/kayakresa', name: 'KayakResa', component: KayakResa },
   { path: '/repasresa', name: 'RepasResa', component: RepasResa },
-  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound } // ← 404
+  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound }, // ← 404
+  { path: '/kiosk',
+    component: KioskLayout,
+    children: [
+      { path: '',  name:'KioskHome', component: HomeKiosk },
+      // éventuellement d'autres écrans kiosk plus tard
+    ]
+  },
+  { path: '/:pathMatch(.*)*', name:'NotFound', component: NotFound }
 ]
 
 const router = createRouter({
