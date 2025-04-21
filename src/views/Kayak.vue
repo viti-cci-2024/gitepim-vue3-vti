@@ -51,7 +51,7 @@
           <div class="absolute inset-0 flex flex-col justify-center p-4 md:p-6">
             <h2 class="text-3xl font-bold">Une expérience unique</h2>
             <br />
-            <h4 class="font-bold text-lg mb-2 pb-2">
+            <h4 class="text-lg md:text-xl mb-2 pb-2">
               À l'origine, le kayak était inuit, fabriqué avec des membrures pliées, bordées et recouvertes de peaux, et
               manœuvré à l'aide d'une pagaie simple ou double. Aujourd'hui, il est réalisé en toile imperméable, en
               matériaux synthétiques ou pneumatiques, et se manœuvre avec une pagaie double. Certaines versions modernes comportent un trou, l'hiloire,
