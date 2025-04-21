@@ -20,11 +20,16 @@
     <div class="max-w-7xl mx-auto">
       <h2 class="text-3xl font-bold">Nos Bungalows</h2><br>
       <div class="flex flex-col md:flex-row justify-around gap-6">
-        <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center rounded-xl shadow-lg"
+        <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center rounded-xl shadow-lg overflow-hidden"
           style="background-image: url('/chambre/Bungalow-Jardin-01.png')">
-          <div class="absolute inset-0 flex flex-col justify-start p-4 md:p-6">
-            <h2 class="text-2xl md:text-4xl font-bold text-white text-shadow mb-2">Bungalow Jardin</h2>
-            <p class="text-white text-xl md:text-xl text-shadow mb-4">Spacieux et confortables dans un cadre verdoyant !
+
+          <!-- Calque sombre -->
+          <div class="absolute inset-0 bg-black/40 z-0"></div>
+
+          <!-- Contenu visible -->
+          <div class="absolute inset-0 flex flex-col justify-start p-4 md:p-6 z-10">
+            <h2 class="text-4xl font-bold text-white text-shadow mb-2">Bungalow Jardin</h2>
+            <p class="text-white text-xl md:text-xl text-shadow mb-4">Spacieux et confortables dans un cadre verdoyant !
             </p>
             <RouterLink :to="{ name: 'Chambre' }"
               class="self-start inline-block text-lg font-semibold py-3 px-8 rounded-full bg-[#FE8A24] text-white transition-all hover:bg-[#09012B] hover:scale-105">
@@ -33,24 +38,31 @@
           </div>
         </div>
 
-        <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center rounded-xl shadow-lg"
+        <div class="relative w-full md:w-1/2 h-[400px] bg-cover bg-center rounded-xl shadow-lg overflow-hidden"
           style="background-image: url('/chambre/Bungalow-Mer-01.png')">
-          <div class="absolute inset-0 flex flex-col justify-start p-4 md:p-6">
-            <h2 class="text-2xl md:text-4xl font-bold text-white text-shadow mb-2">Bungalow Vue Mer</h2>
-            <p class="text-white text-xl md:text-xl text-shadow mb-4">Laissez-vous bercer par le son des vagues sur la
-              terrasse</p>
+
+          <!-- Calque foncé -->
+          <div class="absolute inset-0 bg-black/40 z-0"></div>
+
+          <!-- Contenu -->
+          <div class="absolute inset-0 flex flex-col justify-start p-4 md:p-6 z-10">
+            <h2 class="text-4xl font-bold text-white text-shadow mb-2">Bungalow Vue Mer</h2>
+            <p class="text-white text-xl md:text-xl text-shadow mb-4">
+              Laissez-vous bercer par le son des vagues sur la terrasse.
+            </p>
             <RouterLink :to="{ name: 'Chambre' }"
               class="self-start inline-block text-lg font-semibold py-3 px-8 rounded-full bg-[#FE8A24] text-white transition-all hover:bg-[#09012B] hover:scale-105">
               En savoir plus
             </RouterLink>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
- <!------------------------- CAROUSEL ------------------------------>
- <section class="py-10 px-4 bg-white">
+  <!------------------------- CAROUSEL ------------------------------>
+  <section class="py-10 px-4 bg-white">
     <div class="max-w-7xl mx-auto">
       <div class="flex justify-between items-center mb-6">
         <h2 class="text-3xl font-bold">Nos activités</h2>
@@ -60,37 +72,30 @@
         <!-- Boutons de navigation -->
         <button @click="prev" :disabled="isAnimating"
           class="absolute top-1/2 left-0 -translate-y-1/2 bg-white text-gray-800 p-4 rounded-full shadow-lg hover:bg-gray-100 transition z-10">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-            viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M15 19l-7-7 7-7" />
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
           </svg>
         </button>
 
         <button @click="next" :disabled="isAnimating"
           class="absolute top-1/2 right-0 -translate-y-1/2 bg-white text-gray-800 p-4 rounded-full shadow-lg hover:bg-gray-100 transition z-10">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-            viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 5l7 7-7 7" />
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
           </svg>
         </button>
 
         <!-- Carousel -->
-        <div class="flex transition-transform duration-500 ease-in-out"
-          :style="{
-            transform: `translateX(-${currentSlide * 100}%)`,
-            transition: disableTransition ? 'none' : ''
-          }"
-          @transitionend="handleTransitionEnd">
+        <div class="flex transition-transform duration-500 ease-in-out" :style="{
+          transform: `translateX(-${currentSlide * 100}%)`,
+          transition: disableTransition ? 'none' : ''
+        }" @transitionend="handleTransitionEnd">
           <div v-for="(group, index) in extendedSlides" :key="index" class="flex-shrink-0 w-full flex gap-6">
             <div v-for="item in group" :key="item.title"
               class="w-full md:w-1/2 lg:w-1/3 bg-white rounded-xl shadow border border-gray-200">
-              <img :src="item.image" :alt="item.title"
-                class="w-full h-48 object-cover object-top rounded-t" />
+              <img :src="item.image" :alt="item.title" class="w-full h-48 object-cover object-top rounded-t" />
               <div class="p-4">
-                <h4 class="font-bold text-lg mb-2">{{ item.title }}</h4>
-                <p class="text-sm mb-4">{{ item.text }}</p>
+                <h4 class="font-bold text-lg md:text-xl mb-2">{{ item.title }}</h4>
+                <p class="text-base md:text-lg mb-4">{{ item.text }}</p>
                 <RouterLink :to="item.link"
                   class="inline-block text-sm font-semibold py-2 px-4 rounded-full bg-[#FE8A24] text-white transition-all hover:bg-[#09012B] hover:scale-105">
                   En savoir plus
@@ -106,8 +111,15 @@
 
   <!------------------------- SEPARATION ------------------------------>
 
-  <section class="w-full h-[25vh] bg-cover bg-start mb-8" :style="{ backgroundImage: 'url(/sep-accueil.png)' }">
-  </section>
+  <section class="w-full h-[25vh] bg-cover bg-start mb-8 flex items-center justify-center"
+         :style="{ backgroundImage: 'url(/sep-accueil.webp)' }">
+  <div class="text-center">
+    <span class="mb-3 text-white text-4xl md:text-5xl font-bold">
+      Vivez une expérience unique !
+    </span>
+  </div>
+</section>
+
 
   <!------------------------- TEMOIGNAGES ------------------------------>
 
@@ -120,9 +132,9 @@
           class="bg-white rounded-lg shadow p-6 text-center border border-gray-200">
           <img :src="testimonial.avatar" :alt="`Avatar de ${testimonial.name}`"
             class="w-20 h-20 rounded-full mx-auto mb-4 object-cover" />
-          <h5 class="text-xl font-semibold">{{ testimonial.name }}</h5>
+          <h5 class="text-lg md:text-2xl font-semibold">{{ testimonial.name }}</h5>
           <p class="text-gray-500 mb-2">{{ testimonial.location }}</p>
-          <p class="text-gray-700 mb-4">"{{ testimonial.text }}"</p>
+          <p class="text-gray-700 mb-4 text-base md:text-lg">"{{ testimonial.text }}"</p>
           <div class="flex justify-center text-yellow-500 text-xl">
             <template v-for="n in 5" :key="n">
               <span>{{ n <= Math.floor(testimonial.rating) ? '★' : '☆' }}</span>
@@ -136,38 +148,29 @@
 
 
 
-    <!------------------------- BANDEAU PRE-FOOTER ------------------------------>
- 
-    <section
-  class="w-full h-[40vh] md:h-[30vh] bg-cover bg-[center_65%]  flex items-center justify-center bg-gray-500 bg-blend-multiply"
-  :style="{ backgroundImage: 'url(/chambre/Bungalow-Jardin-05.png)' }"
->
-  <div class="text-center">
-    <h1 class="mb-3 text-white text-4xl font-bold">
-      Réservez votre bungalow !
-    </h1>
-    <!-- Bouton Réservez via RouterLink vers la page "Chambre" -->
-    <RouterLink
-      :to="{ name: 'ChambreResa' }"
-      class="inline-block text-lg font-semibold py-3 px-8 rounded-full bg-[#FE8A24] text-white transition-all hover:bg-[#09012B] hover:scale-105"
-    >
-      Je réserve !
-    </RouterLink>
-  </div>
-</section>
+  <!------------------------- BANDEAU PRE-FOOTER ------------------------------>
 
-
-
-
-
-
+  <section
+    class="w-full h-[40vh] md:h-[30vh] bg-cover bg-[center_65%]  flex items-center justify-center bg-gray-500 bg-blend-multiply"
+    :style="{ backgroundImage: 'url(/chambre/Bungalow-Jardin-05.png)' }">
+    <div class="text-center">
+      <h1 class="mb-3 text-white text-4xl font-bold">
+        Réservez votre bungalow !
+      </h1>
+      <!-- Bouton Réservez via RouterLink vers la page "Chambre" -->
+      <RouterLink :to="{ name: 'ChambreResa' }"
+        class="inline-block text-lg font-semibold py-3 px-8 rounded-full bg-[#FE8A24] text-white transition-all hover:bg-[#09012B] hover:scale-105">
+        Je réserve !
+      </RouterLink>
+    </div>
+  </section>
 
 
 
 </template>
 
 
-  <!------------------------- SCRIPTS ------------------------------>
+<!------------------------- SCRIPTS ------------------------------>
 <script setup>
 import { ref, computed, onMounted, onUnmounted, nextTick, watch } from 'vue'
 import { RouterLink } from 'vue-router'
@@ -176,11 +179,11 @@ import { RouterLink } from 'vue-router'
 
 // Vos items de carousel
 const items = [
-  { title: 'Visite du bagne', text: "Replongez avec notre guide dans l'histoire du pays sur l'île de Pam", image: '/carou-bagne.jpg', link: { name: 'Bagne' } },
-  { title: 'Randonnée équestre', text: "De belles balades dans la nature avec notre guide. À ne pas manquer !", image: '/carou-cheval.jpg', link: { name: 'Cheval' } },
+  { title: 'Visite du bagne', text: "Replongez avec notre guide dans l'histoire du pays sur l'île de Pam.", image: '/carou-bagne.jpg', link: { name: 'Bagne' } },
+  { title: 'Randonnée équestre', text: "De belles balades dans la nature avec notre guide. À ne pas manquer !", image: '/carou-cheval.jpg', link: { name: 'Cheval' } },
   { title: 'Notre garderie', text: "Confiez-nous avec sérénité vos enfants pendant vos activités sportives ou de repos.", image: '/carou-gard.jpg', link: { name: 'Garderie' } },
   { title: 'Club nautique', text: "Balades en famille ou avec vos amis, détente ou sportive en kayak sur le lagon.", image: '/carou-kayak.jpg', link: { name: 'Kayak' } },
-  { title: 'Restaurant Pim', text: "Pour les gourmets et les gourmands, notre carte saura vous ravir !", image: '/carou-repas.jpg', link: { name: 'Repas' } },
+  { title: 'Restaurant Pim', text: "Pour les gourmets et les gourmands, notre carte saura vous ravir !", image: '/carou-repas.jpg', link: { name: 'Repas' } },
   { title: 'Nos bungalows', text: "Jardin ou vue mer, choisissez votre bungalow pour passer un séjour idéal.", image: '/carou-bung.jpg', link: { name: 'Chambre' } },
 ]
 
@@ -276,17 +279,16 @@ watch(itemsPerSlide, () => {
 /* --------------------- FIN CAROUSEL --------------------- */
 
 const testimonials = [
-  { name: 'Billy Gaytes', location: 'USA, Chicago', text: "Notre séjour était fantastique ! Wonderful ! I'll be back, c'est certain !", avatar: '/avatar1.png', rating: 4.5 },
-  { name: 'Elsa Gorithme', location: 'France, Nice', text: 'Le personnel du gîte était au top et la qualité de la literie est exceptionnelle !', avatar: '/avatar2.png', rating: 5 },
-  { name: 'Olivia Jax', location: 'Vanuatu, Port-Vila', text: 'Incroyable site et le personnel était merveilleux. Je reviendrai !', avatar: '/avatar3.png', rating: 4 },
+  { name: 'Billy Gaytes', location: 'USA, Chicago', text: "Notre séjour était fantastique ! Wonderful ! I'll be back, c'est certain !", avatar: '/avatar1.png', rating: 4.5 },
+  { name: 'Elsa Gorithme', location: 'France, Nice', text: 'Le personnel du gîte était au top et la qualité de la literie est exceptionnelle !', avatar: '/avatar2.png', rating: 5 },
+  { name: 'Olivia Jax', location: 'Vanuatu, Port-Vila', text: 'Incroyable site et le personnel était merveilleux. Je reviendrai !', avatar: '/avatar3.png', rating: 4 },
 ]
 </script>
 
-  <!------------------------- STYLES ------------------------------>
+<!------------------------- STYLES ------------------------------>
 
 <style scoped>
 .text-shadow {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 </style>
-
