@@ -54,54 +54,70 @@
   </section>
 
 
-  <!------------------------- LES 2 CARDS ALTERNANTS ------------------------------>
+  <!-- SECTION ALTERNANTE AMÉLIORÉE -->
+<section class="w-full bg-white mt-10 mb-10 md:mt-20 md:mb-30">
+  <div class="relative overflow-hidden" @click="forceTransition">
+    <transition name="fade" mode="out-in">
+      <!-- Bungalow Mer -->
+      <div
+        v-if="showMer"
+        key="mer"
+        class="flex flex-col md:flex-row md:h-[400px] gap-6"
+      >
+        <!-- Image -->
+        <div
+          class="w-full md:w-1/2 h-60 md:h-full bg-cover bg-center rounded-tr-lg md:rounded-tr-none md:rounded-br-lg shadow-lg"
+          style="background-image: url('/chambre/Bungalow-Mer-01.webp')"
+        ></div>
 
-  <!-- Conteneur global sans scroll vertical, hauteur fixe -->
-  <section class="w-full bg-white mt-10 mb-10 md:mt-30 md:mb-40">
-    <div class="relative h-[400px] overflow-hidden" @click="forceTransition">
-      <transition name="fade" mode="out-in">
-        <!-- Section Bungalow Mer -->
-        <div v-if="showMer" key="mer" class="absolute inset-0 flex flex-col md:flex-row justify-around gap-6">
-          <!-- Image à gauche avec coins arrondis à droite -->
-          <div class="relative w-full md:w-1/2 h-full bg-cover bg-center rounded-tr-lg rounded-br-lg shadow-lg"
-            style="background-image: url('/chambre/Bungalow-Mer-01.webp')"></div>
-          <!-- Texte à droite -->
-          <div class="relative w-full md:w-1/2 h-full bg-cover bg-center">
-            <div class="absolute inset-0 flex flex-col justify-center p-4 md:p-6">
-              <h2 class="text-3xl font-bold">
-                Vivez une expérience unique face à l’océan.
-              </h2>
-              <h4 class="mt-4 text-lg md:text-xl">
-                Ces 5 bungalows Mer vous accueillent dans un cadre apaisant, mêlant élégance et confort. Leur décoration
-                lumineuse, touches de bois naturel et grandes baies vitrées offrent une vue imprenable sur la mer, avec
-                une terrasse privée pour admirer le coucher du soleil.
-              </h4>
-            </div>
+        <!-- Texte -->
+        <div class="w-full md:w-1/2 flex items-center">
+          <div class="p-4 md:p-6">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">
+              Vivez une expérience unique face à l’océan.
+            </h2>
+            <p class="text-base md:text-xl">
+              Ces 5 bungalows Mer vous accueillent dans un cadre apaisant, mêlant élégance et confort. Leur décoration
+              lumineuse, touches de bois naturel et grandes baies vitrées offrent une vue imprenable sur la mer, avec
+              une terrasse privée pour admirer le coucher du soleil.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bungalow Jardin -->
+      <div
+        v-else
+        key="jardin"
+        class="flex flex-col-reverse md:flex-row md:h-[400px] gap-6"
+      >
+        <!-- Texte -->
+        <div class="w-full md:w-1/2 flex items-center">
+          <div class="p-4 md:p-6">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">
+              Découvrez 10 bungalows jardin exceptionnels.
+            </h2>
+            <p class="text-base md:text-xl">
+              Nichés au cœur d’un jardin luxuriant, ces 10 bungalows offrent un véritable havre de paix. Alliant
+              charme naturel et confort moderne, chaque bungalow bénéficie d’un design soigné, d’un accès direct à des
+              espaces verts fleuris et d’installations haut de gamme pour des instants inoubliables.
+            </p>
           </div>
         </div>
 
-        <!-- Section Bungalow Jardin -->
-        <div v-else key="jardin" class="absolute inset-0 flex flex-col md:flex-row justify-around gap-6">
-          <!-- Texte à gauche -->
-          <div class="relative w-full md:w-1/2 h-full bg-cover bg-center">
-            <div class="absolute inset-0 flex flex-col justify-center p-4 md:p-6">
-              <h2 class="text-3xl font-bold">
-                Découvrez 10 bungalows jardin exceptionnels.
-              </h2>
-              <h4 class="mt-4 text-lg md:text-xl">
-                Nichés au cœur d’un jardin luxuriant, ces 10 bungalows offrent un véritable havre de paix. Alliant
-                charme naturel et confort moderne, chaque bungalow bénéficie d’un design soigné, d’un accès direct à des
-                espaces verts fleuris et d’installations haut de gamme pour des instants inoubliables.
-              </h4>
-            </div>
-          </div>
-          <!-- Image à droite avec coins arrondis à gauche -->
-          <div class="relative w-full md:w-1/2 h-full bg-cover bg-center rounded-tl-lg rounded-bl-lg shadow-lg"
-            style="background-image: url('/chambre/Bungalow-Jardin-01.webp')"></div>
-        </div>
-      </transition>
-    </div>
-  </section>
+        <!-- Image -->
+        <div
+          class="w-full md:w-1/2 h-60 md:h-full bg-cover bg-center rounded-tl-lg md:rounded-tl-none md:rounded-bl-lg shadow-lg"
+          style="background-image: url('/chambre/Bungalow-Jardin-01.webp')"
+        ></div>
+      </div>
+    </transition>
+  </div>
+</section>
+
+
+
+
 
   <!------------------------- BANDEAU PRE-FOOTER ------------------------------>
 
