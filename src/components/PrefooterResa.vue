@@ -10,7 +10,7 @@
       </h1>
 
       <!-- Conteneur du slider : position relative, largeur 100% et overflow-hidden -->
-      <div class="relative w-full h-16 overflow-hidden">
+      <div class="relative w-full h-16">
         <transition name="slide" mode="out-in">
           <p
             :key="currentIndex"
@@ -20,6 +20,7 @@
           </p>
         </transition>
       </div>
+
 
       <RouterLink
         :to="{ name: 'Home' }"
