@@ -6,7 +6,7 @@
   >
     <div class="text-center">
       <h1 class="mb-3 text-white text-4xl font-bold">
-        Réservez votre visite !
+        Réservez votre visite ! 
       </h1>
 
       <!-- Conteneur du slider : position relative, largeur 100% et overflow-hidden -->
