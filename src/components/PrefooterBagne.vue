@@ -6,7 +6,7 @@
   >
     <div class="text-center">
       <h1 class="mb-3 text-white text-4xl font-bold">
-        Réservez votre visite !
+        Réservez votre visite !
       </h1>
 
       <!-- Conteneur du slider : position relative, largeur 100% et overflow-hidden -->
@@ -25,7 +25,7 @@
         :to="{ name: 'BagneResa' }"
         class="mt-4 inline-block text-lg font-semibold py-3 px-8 rounded-full bg-[#FE8A24] text-white transition-all hover:bg-[#09012B] hover:scale-105"
       >
-        Je réserve !
+        Je réserve !
       </RouterLink>
     </div>
   </section>
